@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="co.herxun.impp"
+    android:versionCode="7"
+    android:versionName="2.2.2" >
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" >
+    </uses-feature>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    
+	<!-- 对于需要为小米设备做特殊推送服务适配的app可以将此段打开使用, 具体方式请参照本文件最下方段落的注释 --> 
+	<uses-permission android:name="co.herxun.impp.permission.MIPUSH_RECEIVE" />
+	<permission android:name="co.herxun.impp.permission.MIPUSH_RECEIVE" android:protectionLevel="signatureOrSystem" /> 
+    
+    <uses-sdk android:targetSdkVersion="21" />
+
+
+    <application
+        android:name=".IMppApp"
+        android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/app_icon_128"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:vmSafeMode="true"
+        android:networkSecurityConfig="@xml/network_security_config">
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+        <meta-data android:name="com.arrownock.APP_KEY" android:value="@string/app_key" />
+		
+        <!-- umeng integration -->
+        <meta-data android:name="UMENG_APPKEY" android:value="@string/umeng_appkey" />
+        <meta-data android:name="UMENG_CHANNEL" android:value="impp" />
+        <!-- End -->
+        
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.SearchUserActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CreateTopicActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.FriendRequestActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="eu.janmuller.android.simplecropimage.CropImage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.PictureActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.EditTopicActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.VideoActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.UserDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.WallActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CreatePostActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CommentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.HelpDeskActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CustomServiceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CustomServiceBaseActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.RoomUserListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.RoomListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CreateRoomActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.RoomDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CreateRoomPostActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.AnnounceListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CommunityListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CreateCommunityActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.BrowserActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.VoteListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CreateVoteActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.VoteDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.VoteResultsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.BulletinListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.BulletinBrowserActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.EventListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.EventDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.CreateEventActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.AttendedUserListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+		<activity
+            android:name=".activity.ApplySourceCodeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <service android:name="com.arrownock.push.PushService" />
+
+        <receiver android:name=".NotificationReceiver" >
+            <intent-filter>
+                <action android:name="com.arrownock.push.PushService.MSG_ARRIVAL" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+		
+        <!-- 对于需要为小米设备做特殊推送服务适配的app可以将此段打开使用 --> 
+        <!-- 
+        	开启小米设备特殊适配支持的方式：
+        	1. 下载小米推送SDK，并放置入 libs 文件夹
+        	2. 将下段注释开启
+        	3. 将 src/co/herxun/impp/MiPushNotificationReceiver.java.bak 文件重命名为: MiPushNotificationReceiver.java
+        	4. 将本文件上半部的 permission 开启（共2个）
+        	5. 在 res/values/string.xml 中填写 mipush_appid 和 mipush_appkey, 分别为在小米开发者中心创建的app id 和 key
+        	6. 在箭扣管理控制台中，进入"设置" -> "MiPush"，填写小米推送的 secret 和 APP包名
+        	
+        	更多关于小米推送适配的方法，请参考：http://docs.arrownock.com/guides/anpush/mipush
+        -->
+        <meta-data android:name="com.arrownock.push.ENABLE_MIPUSH" android:value="true" />
+		<meta-data android:name="com.arrownock.push.MIPUSH_APPID" android:value="@string/mipush_appid" />
+		<meta-data android:name="com.arrownock.push.MIPUSH_APPKEY" android:value="@string/mipush_appkey" />
+        <receiver
+		    android:exported="true"
+		    android:name=".MiPushNotificationReceiver">
+		    <intent-filter>
+		        <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+		    </intent-filter>
+		    <intent-filter>
+		        <action android:name="com.xiaomi.mipush.ERROR" />
+		    </intent-filter>
+		</receiver>
+		<service
+		    android:enabled="true"
+		    android:process=":pushservice"
+		    android:name="com.xiaomi.push.service.XMPushService"/>
+		<service
+		    android:enabled="true"
+		    android:exported="true"
+		    android:name="com.xiaomi.mipush.sdk.PushMessageHandler" /> 
+		<service android:enabled="true"
+		    android:name="com.xiaomi.mipush.sdk.MessageHandleService" /> 
+		<receiver
+		    android:exported="true"
+		    android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver" >
+		    <intent-filter>
+		        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+		</receiver>
+		<receiver
+		    android:exported="false"
+		    android:process=":pushservice"
+		    android:name="com.xiaomi.push.service.receivers.PingReceiver" >
+		    <intent-filter>
+		        <action android:name="com.xiaomi.push.PING_TIMER" />
+		    </intent-filter>
+		</receiver>
+    </application>
+</manifest>

@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no5"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <co.herxun.impp.view.AppBar
+        android:id="@+id/community_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/no1" />
+
+    <co.herxun.impp.view.SlidingTabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/community_app_bar"
+        android:background="@color/no1" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sliding_tabs" >
+    </android.support.v4.view.ViewPager>
+
+    <ImageView
+        android:id="@+id/wall_addBtn"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        app:srcCompat="@drawable/add" />
+
+</RelativeLayout>

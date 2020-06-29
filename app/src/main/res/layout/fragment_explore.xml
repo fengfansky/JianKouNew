@@ -1,0 +1,338 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no5"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/explore_btn_wall"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/click_selector" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            app:srcCompat="@drawable/timeline" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/no7" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:text="@string/wall_circle"
+            android:textColor="@color/no11"
+            android:textSize="16dp" />
+
+        <co.herxun.impp.view.BadgeView
+            android:id="@+id/explore_badgeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:text="0" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/explore_btn_group"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/click_selector" 
+        android:layout_below="@id/explore_btn_wall">
+
+        <ImageView
+            android:id="@+id/ImageView02"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            app:srcCompat="@drawable/room" />
+
+        <View
+            android:id="@+id/View3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/no7" />
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/ImageView02"
+            android:text="@string/wall_room"
+            android:textColor="@color/no11"
+            android:textSize="16dp" />
+
+        <co.herxun.impp.view.BadgeView
+            android:id="@+id/BadgeView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:text="0" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/explore_btn_customservice"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/click_selector" 
+        android:layout_below="@id/explore_btn_group">
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            app:srcCompat="@drawable/desk" />
+
+        <View
+            android:id="@+id/View2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/no7" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/ImageView01"
+            android:text="@string/cs_help_desk"
+            android:textColor="@color/no11"
+            android:textSize="16dp" />
+
+        <co.herxun.impp.view.BadgeView
+            android:id="@+id/BadgeView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:text="0" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/explore_btn_chat"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/click_selector" 
+        android:layout_below="@id/explore_btn_customservice">
+
+        <ImageView
+            android:id="@+id/ImageView02"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            app:srcCompat="@drawable/chat" />
+
+        <View
+            android:id="@+id/View3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/no7" />
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/ImageView02"
+            android:text="@string/tab_title_chat"
+            android:textColor="@color/no11"
+            android:textSize="16dp" />
+
+        <co.herxun.impp.view.BadgeView
+            android:id="@+id/BadgeView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:text="0" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/explore_btn_annon"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/click_selector" 
+        android:layout_below="@id/explore_btn_chat">
+
+        <ImageView
+            android:id="@+id/ImageView02"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            app:srcCompat="@drawable/board" />
+
+        <View
+            android:id="@+id/View3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/no7" />
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/ImageView02"
+            android:text="@string/tab_title_annoncement"
+            android:textColor="@color/no11"
+            android:textSize="16dp" />
+
+        <co.herxun.impp.view.BadgeView
+            android:id="@+id/BadgeView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:text="0" />
+
+        <!--
+             <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:text="@string/tab_coming_soon"
+            android:textColor="@color/no5"
+            android:textSize="10dp" 
+            android:background="@drawable/coming_soon"/>
+        -->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/explore_btn_media"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/click_selector" 
+        android:layout_below="@id/explore_btn_annon">
+
+        <ImageView
+            android:id="@+id/ImageView02"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            app:srcCompat="@drawable/media" />
+
+        <View
+            android:id="@+id/View3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/no7" />
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/ImageView02"
+            android:text="@string/tab_title_media"
+            android:textColor="@color/no8"
+            android:textSize="16dp" />
+
+        <co.herxun.impp.view.BadgeView
+            android:id="@+id/BadgeView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:text="0" />
+
+        <!--
+             <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:text="@string/tab_coming_soon"
+            android:textColor="@color/no5"
+            android:textSize="10dp" 
+            android:background="@drawable/coming_soon"/>
+        -->
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/apply_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/btn_apply_selector"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:textSize="14dp"
+        android:text="@string/apply_source"
+        android:textColor="@color/no1" />
+</RelativeLayout>

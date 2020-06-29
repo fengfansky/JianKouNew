@@ -1,0 +1,244 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <!--  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/left_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="5"
+            android:background="@drawable/click_selector" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|top"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_event_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/annou_default3" />
+
+                    <TextView
+                        android:id="@+id/tv_sign_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/no1"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="sdfsdfdsf"
+                        android:textColor="@color/no5"
+                        android:textSize="8sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_event_title_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="left"
+                    android:maxLines="2"
+                    android:text="电子期刊继续征稿，精美礼品等你"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E7E7E7" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/iv_user_left"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/friend_default" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_username_left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="大鱼海棠"
+                            android:textColor="#727272"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_event_createdat_left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2015-08-24 09:32"
+                            android:textColor="#B8B8B8"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/right_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="5"
+            android:background="@drawable/click_selector"
+            android:visibility="invisible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center|top"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_event_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/annou_default3" />
+
+                    <TextView
+                        android:id="@+id/tv_sign_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/no1"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="sdfsdfdsf"
+                        android:textColor="@color/no5"
+                        android:textSize="8sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_event_title_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="left"
+                    android:maxLines="2"
+                    android:text="电子期刊继续征稿，精美礼品等你"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E7E7E7" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/iv_user_right"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/friend_default" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_username_right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="大鱼海棠"
+                            android:textColor="#727272"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_event_createdat_right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2015-08-24 09:32"
+                            android:textColor="#B8B8B8"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardview" >
+    </LinearLayout>
+
+</RelativeLayout>

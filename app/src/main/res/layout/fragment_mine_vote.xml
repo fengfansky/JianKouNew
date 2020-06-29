@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no5"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <co.herxun.impp.view.VoteView
+        android:id="@+id/mine_voteView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </co.herxun.impp.view.VoteView>
+
+    <TextView
+        android:id="@+id/noMineVoteLabel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="#ededed"
+        android:gravity="center_horizontal"
+        android:paddingTop="100dp"
+        android:text="@string/no_annou_vote"
+        android:textColor="@color/no9"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

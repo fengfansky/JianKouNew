@@ -1,0 +1,321 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no5"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <co.herxun.impp.view.AppBar
+        android:id="@+id/create_post_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/no1" >
+    </co.herxun.impp.view.AppBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/create_post_app_bar" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/annou_event_create_main"
+                    android:textColor="#9B9B9B"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_event_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/annou_event_create_main_hint"
+                    android:padding="16dp"
+                    android:singleLine="true"
+                    android:textColor="#4C4C4C"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="20sp" />
+
+                <requestFocus />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E7E7E7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/annou_event_create_cover"
+                    android:textColor="#9B9B9B"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_cover"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/dot_line" >
+
+                <ImageView
+                    android:id="@+id/iv_cover"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/click_cover"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/iv_click_off"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/click_off"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E7E7E7" />
+
+            <LinearLayout
+                android:id="@+id/ll_startdate"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/annou_event_create_starttime"
+                    android:textColor="#9B9B9B"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_startdate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:textColor="#4C4C4C"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="60dp"
+                android:background="#E7E7E7" />
+
+            <LinearLayout
+                android:id="@+id/ll_enddate"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/annou_event_create_endtime"
+                    android:textColor="#9B9B9B"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_enddate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:textColor="#4C4C4C"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E7E7E7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/annou_event_create_address"
+                    android:textColor="#9B9B9B"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_event_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/annou_event_create_address_hint"
+                    android:padding="16dp"
+                    android:singleLine="true"
+                    android:textColor="#4C4C4C"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E7E7E7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/annou_event_create_cost"
+                    android:textColor="#9B9B9B"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_event_cost"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/annou_event_create_cost_hint"
+                    android:padding="16dp"
+                    android:singleLine="true"
+                    android:textColor="#4C4C4C"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E7E7E7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/annou_event_create_user_limit"
+                    android:textColor="#9B9B9B"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_event_user_limit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/annou_event_create_limit_hint"
+                    android:padding="16dp"
+                    android:singleLine="true"
+                    android:textColor="#4C4C4C"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E7E7E7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/annou_event_create_desc"
+                    android:textColor="#9B9B9B"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_event_information"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/annou_event_create_desc_hint"
+                    android:padding="16dp"
+                    android:textColor="#4C4C4C"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

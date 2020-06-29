@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#9000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="no1">#FF5CB5B5</color>
+    <color name="no2">#FF52AAAA</color>
+    <color name="no3">#FF429B9B</color>
+    <color name="no4">#FF000000</color>
+    <color name="no5">#FFFFFFFF</color>
+    <color name="no6">#FFEFEFEF</color>
+    <color name="no7">#FFE0E0E0</color>
+    <color name="no8">#FFBDBDBD</color>
+    <color name="no9">#FF989898</color>
+    <color name="no10">#FF757575</color>
+    <color name="no11">#FF4C4C4C</color>
+    <color name="no12">#FF212121</color>
+    <color name="no13">#FFEEFF41</color>
+    <color name="no14">#FFE6EF2E</color>
+    <color name="no15">#FFd6503e</color>
+    <color name="textColor">#4C4C4C</color>
+    <color name="textHintColor">#E1E1E1</color>
+    <color name="no16">#EEEEEE</color>
+
+    <color name="circle_background">#f2f2f2</color>
+    <color name="line_background">#cccccc</color>
+    <color name="ampm_text_color">#8c8c8c</color>
+    <color name="done_text_color_normal">#000000</color>
+    <color name="done_text_color_disabled">#cccccc</color>
+    <color name="numbers_text_color">#8c8c8c</color>
+    <color name="transparent_black">#7f000000</color>
+    <color name="blue">#33b5e5</color>
+    <color name="blue_focused">#c1e8f7</color>
+    <color name="neutral_pressed">#33999999</color>
+    <color name="darker_blue">#0099cc</color>
+    <color name="date_picker_text_normal">#ff999999</color>
+    <color name="date_picker_text_disabled">#ccc</color>
+    <color name="calendar_header">#999999</color>
+    <color name="date_picker_view_animator">#f2f2f2</color>
+    <color name="calendar_selected_date_text">#ffd1d2d4</color>
+
+    <!-- Colors for red theme -->
+    <color name="red">#ff3333</color>
+    <color name="red_focused">#853333</color>
+    <color name="light_gray">#404040</color>
+    <color name="dark_gray">#363636</color>
+    <color name="line_dark">#808080</color>
+    <color name="done_text_color_dark_normal">#ffffff</color>
+    <color name="done_text_color_dark_disabled">#888888</color>
+    <color name="done_disabled_dark">#bfbfbf</color>
+
+    <!-- Background color for light CardView. -->
+    <color name="cardview_light_background">#FFFAFAFA</color>
+    <!-- Background color for dark CardView. -->
+    <color name="cardview_dark_background">#FF202020</color>
+    <!-- Shadow color for the first pixels around CardView. -->
+    <color name="cardview_shadow_start_color">#37000000</color>
+    <!-- Shadow color for the furthest pixels around CardView. -->
+    <color name="cardview_shadow_end_color">#03000000</color>
+</resources>

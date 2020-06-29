@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no5"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/click_selector" >
+
+        <ImageView
+            android:id="@+id/user_detail_img"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            app:srcCompat="@drawable/friend_request" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/user_detail_img" >
+
+            <TextView
+                android:id="@+id/user_detail_text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/user_detail_text_nickname"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/id_text"
+                android:gravity="bottom"
+                android:text="@string/friend_friend_request"
+                android:textColor="@color/no8"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/user_detail_text_nickname"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="16dp"
+                android:gravity="bottom"
+                android:text="@string/setting_id_text"
+                android:textColor="@color/no8"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/user_detail_text_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="0px"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="0px"
+                android:layout_toRightOf="@+id/user_detail_img"
+                android:includeFontPadding="false"
+                android:text="@string/login_nickname"
+                android:textColor="@color/no10"
+                android:textSize="27dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view102"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll"
+        android:background="@color/no7" />
+
+    <View
+        android:id="@+id/view103"
+        android:layout_width="match_parent"
+        android:layout_height="37.3dp"
+        android:layout_below="@id/view102" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view103"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="40dp" >
+
+        <View
+            android:id="@+id/view101"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/no7" />
+
+        <TextView
+            android:id="@+id/user_detail_changename_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/view101"
+            android:background="@drawable/click_selector"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="20dp"
+            android:text="@string/setting_change_nickname"
+            android:textColor="@color/no10" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/user_detail_changename_btn"
+            android:background="@color/no7" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:background="@color/no16" >
+
+        <View
+            android:id="@+id/view100"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/no7" />
+
+        <TextView
+            android:id="@+id/user_detail_text_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/view100"
+            android:background="@drawable/setting_selector"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:text="TextView"
+            android:textColor="@color/no10" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/user_detail_text_btn"
+            android:background="@color/no7" />
+    </RelativeLayout>
+
+</RelativeLayout>

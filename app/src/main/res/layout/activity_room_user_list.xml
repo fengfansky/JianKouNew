@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no5"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <co.herxun.impp.view.AppBar
+        android:id="@+id/room_user_list_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/no1" />
+
+    <ListView
+        android:id="@+id/room_user_list_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/room_app_bar"
+        android:divider="@null"
+        android:listSelector="#FFFFFF" >
+    </ListView>
+    
+
+</LinearLayout>

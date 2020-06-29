@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <!--
+        Theme in the "Platform.AppCompat" family are designed to be aliases for the default
+        theme on a given platform version and should set up the default theme ready for adding our
+        unbundled Action Bar.
+    -->
+    <eat-comment/>
+    <style name="Platform.AppCompat" parent="Theme.AppCompat">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="Platform.AppCompat.Light" parent="Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="Platform.AppCompat.Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="Platform.AppCompat.Light.Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="Base.Theme.AppCompat" parent="Base.V21.Theme.AppCompat" />
+
+    <style name="Base.Theme.AppCompat.Light" parent="Base.V21.Theme.AppCompat.Light" />
+
+    <style name="Base.V21.Theme.AppCompat" parent="Base.V7.Theme.AppCompat">
+        <!-- Action Bar styling attributes -->
+        <item name="actionBarSize">?attr/actionBarSize</item>
+        <item name="actionBarDivider">?attr/actionBarDivider</item>
+        <item name="actionBarItemBackground">?attr/actionBarItemBackground</item>
+        <item name="actionButtonStyle">?attr/actionButtonStyle</item>
+        <item name="actionMenuTextColor">?attr/actionMenuTextColor</item>
+        <item name="actionMenuTextAppearance">?attr/actionMenuTextAppearance</item>
+        <item name="actionModeBackground">?attr/actionModeBackground</item>
+        <item name="actionModeCloseDrawable">?attr/actionModeCloseDrawable</item>
+        <item name="actionModeShareDrawable">?attr/actionModeShareDrawable</item>
+        <item name="actionOverflowButtonStyle">?attr/actionOverflowButtonStyle</item>
+        <item name="homeAsUpIndicator">?attr/homeAsUpIndicator</item>
+
+        <!-- For PopupMenu -->
+        <item name="listPreferredItemHeightSmall">?attr/listPreferredItemHeightSmall</item>
+        <item name="textAppearanceLargePopupMenu">?attr/textAppearanceLargePopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">?attr/textAppearanceSmallPopupMenu</item>
+
+        <!-- General view attributes -->
+        <item name="selectableItemBackground">?attr/selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?attr/selectableItemBackgroundBorderless</item>
+        <item name="dividerHorizontal">?attr/dividerHorizontal</item>
+        <item name="dividerVertical">?attr/dividerVertical</item>
+        <item name="editTextBackground">?attr/editTextBackground</item>
+        <item name="editTextColor">?attr/editTextColor</item>
+        <item name="listChoiceBackgroundIndicator">?attr/listChoiceBackgroundIndicator</item>
+
+        <!-- Copy our color theme attributes to the framework -->
+        <item name="colorPrimary">?attr/colorPrimary</item>
+        <item name="colorPrimaryDark">?attr/colorPrimaryDark</item>
+        <item name="colorAccent">?attr/colorAccent</item>
+        <item name="colorControlNormal">?attr/colorControlNormal</item>
+        <item name="colorControlActivated">?attr/colorControlActivated</item>
+        <item name="colorControlHighlight">?attr/colorControlHighlight</item>
+    </style>
+
+    <style name="Base.V21.Theme.AppCompat.Light" parent="Base.V7.Theme.AppCompat.Light">
+        <!-- Action Bar styling attributes -->
+        <item name="actionBarSize">?attr/actionBarSize</item>
+        <item name="actionBarDivider">?attr/actionBarDivider</item>
+        <item name="actionBarItemBackground">?attr/actionBarItemBackground</item>
+        <item name="actionButtonStyle">?attr/actionButtonStyle</item>
+        <item name="actionMenuTextColor">?attr/actionMenuTextColor</item>
+        <item name="actionMenuTextAppearance">?attr/actionMenuTextAppearance</item>
+        <item name="actionModeBackground">?attr/actionModeBackground</item>
+        <item name="actionModeCloseDrawable">?attr/actionModeCloseDrawable</item>
+        <item name="actionModeShareDrawable">?attr/actionModeShareDrawable</item>
+        <item name="actionOverflowButtonStyle">?attr/actionOverflowButtonStyle</item>
+        <item name="homeAsUpIndicator">?attr/homeAsUpIndicator</item>
+
+        <!-- For PopupMenu -->
+        <item name="listPreferredItemHeightSmall">?attr/listPreferredItemHeightSmall</item>
+        <item name="textAppearanceLargePopupMenu">?attr/textAppearanceLargePopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">?attr/textAppearanceSmallPopupMenu</item>
+
+        <!-- General view attributes -->
+        <item name="selectableItemBackground">?attr/selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?attr/selectableItemBackgroundBorderless</item>
+        <item name="dividerHorizontal">?attr/dividerHorizontal</item>
+        <item name="dividerVertical">?attr/dividerVertical</item>
+        <item name="editTextBackground">?attr/editTextBackground</item>
+        <item name="editTextColor">?attr/editTextColor</item>
+        <item name="listChoiceBackgroundIndicator">?attr/listChoiceBackgroundIndicator</item>
+
+        <!-- Copy our color theme attributes to the framework -->
+        <item name="colorPrimary">?attr/colorPrimary</item>
+        <item name="colorPrimaryDark">?attr/colorPrimaryDark</item>
+        <item name="colorAccent">?attr/colorAccent</item>
+        <item name="colorControlNormal">?attr/colorControlNormal</item>
+        <item name="colorControlActivated">?attr/colorControlActivated</item>
+        <item name="colorControlHighlight">?attr/colorControlHighlight</item>
+    </style>
+
+    <style name="Base.V21.Theme.AppCompat.Dialog" parent="Base.V11.Theme.AppCompat.Dialog">
+        <!-- Action Bar styling attributes -->
+        <item name="actionBarSize">?attr/actionBarSize</item>
+        <item name="actionBarDivider">?attr/actionBarDivider</item>
+        <item name="actionBarItemBackground">?attr/actionBarItemBackground</item>
+        <item name="actionButtonStyle">?attr/actionButtonStyle</item>
+        <item name="actionMenuTextColor">?attr/actionMenuTextColor</item>
+        <item name="actionMenuTextAppearance">?attr/actionMenuTextAppearance</item>
+        <item name="actionModeBackground">?attr/actionModeBackground</item>
+        <item name="actionModeCloseDrawable">?attr/actionModeCloseDrawable</item>
+        <item name="actionModeShareDrawable">?attr/actionModeShareDrawable</item>
+        <item name="actionOverflowButtonStyle">?attr/actionOverflowButtonStyle</item>
+        <item name="homeAsUpIndicator">?attr/homeAsUpIndicator</item>
+
+        <!-- For PopupMenu -->
+        <item name="listPreferredItemHeightSmall">?attr/listPreferredItemHeightSmall</item>
+        <item name="textAppearanceLargePopupMenu">?attr/textAppearanceLargePopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">?attr/textAppearanceSmallPopupMenu</item>
+
+        <!-- General view attributes -->
+        <item name="selectableItemBackground">?attr/selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?attr/selectableItemBackgroundBorderless</item>
+        <item name="dividerHorizontal">?attr/dividerHorizontal</item>
+        <item name="dividerVertical">?attr/dividerVertical</item>
+        <item name="editTextBackground">?attr/editTextBackground</item>
+        <item name="editTextColor">?attr/editTextColor</item>
+        <item name="listChoiceBackgroundIndicator">?attr/listChoiceBackgroundIndicator</item>
+
+        <!-- Copy our color theme attributes to the framework -->
+        <item name="colorPrimary">?attr/colorPrimary</item>
+        <item name="colorPrimaryDark">?attr/colorPrimaryDark</item>
+        <item name="colorAccent">?attr/colorAccent</item>
+        <item name="colorControlNormal">?attr/colorControlNormal</item>
+        <item name="colorControlActivated">?attr/colorControlActivated</item>
+        <item name="colorControlHighlight">?attr/colorControlHighlight</item>
+    </style>
+
+    <style name="Base.V21.Theme.AppCompat.Light.Dialog" parent="Base.V11.Theme.AppCompat.Light.Dialog">
+        <!-- Action Bar styling attributes -->
+        <item name="actionBarSize">?attr/actionBarSize</item>
+        <item name="actionBarDivider">?attr/actionBarDivider</item>
+        <item name="actionBarItemBackground">?attr/actionBarItemBackground</item>
+        <item name="actionButtonStyle">?attr/actionButtonStyle</item>
+        <item name="actionMenuTextColor">?attr/actionMenuTextColor</item>
+        <item name="actionMenuTextAppearance">?attr/actionMenuTextAppearance</item>
+        <item name="actionModeBackground">?attr/actionModeBackground</item>
+        <item name="actionModeCloseDrawable">?attr/actionModeCloseDrawable</item>
+        <item name="actionModeShareDrawable">?attr/actionModeShareDrawable</item>
+        <item name="actionOverflowButtonStyle">?attr/actionOverflowButtonStyle</item>
+        <item name="homeAsUpIndicator">?attr/homeAsUpIndicator</item>
+
+        <!-- For PopupMenu -->
+        <item name="listPreferredItemHeightSmall">?attr/listPreferredItemHeightSmall</item>
+        <item name="textAppearanceLargePopupMenu">?attr/textAppearanceLargePopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">?attr/textAppearanceSmallPopupMenu</item>
+
+        <!-- General view attributes -->
+        <item name="selectableItemBackground">?attr/selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?attr/selectableItemBackgroundBorderless</item>
+        <item name="dividerHorizontal">?attr/dividerHorizontal</item>
+        <item name="dividerVertical">?attr/dividerVertical</item>
+        <item name="editTextBackground">?attr/editTextBackground</item>
+        <item name="editTextColor">?attr/editTextColor</item>
+        <item name="listChoiceBackgroundIndicator">?attr/listChoiceBackgroundIndicator</item>
+
+        <!-- Copy our color theme attributes to the framework -->
+        <item name="colorPrimary">?attr/colorPrimary</item>
+        <item name="colorPrimaryDark">?attr/colorPrimaryDark</item>
+        <item name="colorAccent">?attr/colorAccent</item>
+        <item name="colorControlNormal">?attr/colorControlNormal</item>
+        <item name="colorControlActivated">?attr/colorControlActivated</item>
+        <item name="colorControlHighlight">?attr/colorControlHighlight</item>
+    </style>
+
+    <style name="Base.Theme.AppCompat.Dialog" parent="Base.V21.Theme.AppCompat.Dialog" />
+
+    <style name="Base.Theme.AppCompat.Light.Dialog" parent="Base.V21.Theme.AppCompat.Light.Dialog" />
+
+    <style name="Base.ThemeOverlay.AppCompat" parent="ThemeOverlay.AppCompat">
+    </style>
+
+    <style name="Base.ThemeOverlay.AppCompat.Dark" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorControlHighlight">@color/ripple_material_dark</item>
+
+        <!-- Used by MediaRouter -->
+        <item name="isLightTheme">false</item>
+    </style>
+
+    <style name="Base.ThemeOverlay.AppCompat.Light" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorControlHighlight">@color/ripple_material_light</item>
+
+        <!-- Used by MediaRouter -->
+        <item name="isLightTheme">true</item>
+    </style>
+
+    <style name="Base.ThemeOverlay.AppCompat.ActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="Base.ThemeOverlay.AppCompat.Dark.ActionBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">?android:attr/textColorPrimary</item>
+        <item name="colorControlHighlight">@color/ripple_material_dark</item>
+
+        <!-- Used by MediaRouter -->
+        <item name="isLightTheme">false</item>
+    </style>
+
+</resources>

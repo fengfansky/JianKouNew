@@ -1,0 +1,60 @@
+ext {
+    isAlone = false;//false:作为Lib组件存在， true:作为application存在
+    isCloseBeta = true; //标记是否为内测版本，测试打包时设置为true，发布时需要更改为false.
+
+    java_version = JavaVersion.VERSION_1_8
+    android = [
+
+            compileSdkVersion: 26,
+            buildToolsVersion: "28.0.3",
+            minSdkVersion    : 16,
+            targetSdkVersion : 26,
+            versionCode      : 56,
+            versionName      : '3.6.1',
+    ]
+
+    debug = [
+            minSdkVersion: 21
+    ]
+
+    //Android
+    supportLibraryVersion = '26.1.0'
+
+    ijkplayer = '0.8.8'
+    exo_player2 = '2.9.3'
+    transitionseverywhere = '1.7.0'
+    floatWindow = '1.0.6'
+
+    imageLoader = '3.8.0'
+
+    gsonVersion = "2.2.4"
+
+    umengAnalyticsVer = "6.1.4"
+
+    androidDependencies = [
+            recyclerView: "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+            appcompat_v7: "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            cardview_v7 : "com.android.support:cardview-v7:${supportLibraryVersion}",
+            support_v4  : "com.android.support:support-v4:${supportLibraryVersion}",
+            design      : "com.android.support:design:${supportLibraryVersion}",
+    ]
+
+    viewDependencies = [
+            ijkplayer_java       : "tv.danmaku.ijk.media:ijkplayer-java:${ijkplayer}",
+            ijkplayer_armv7a     : "tv.danmaku.ijk.media:ijkplayer-armv7a:${ijkplayer}",
+            ijkplayer_armv5      : "tv.danmaku.ijk.media:ijkplayer-armv5:${ijkplayer}",
+            ijkplayer_arm64      : "tv.danmaku.ijk.media:ijkplayer-arm64:${ijkplayer}",
+            ijkplayer_x86_64     : "tv.danmaku.ijk.media:ijkplayer-x86_64:${ijkplayer}",
+            ijkplayer_x86        : "tv.danmaku.ijk.media:ijkplayer-x86:${ijkplayer}",
+            ijkplayer_exo        : "tv.danmaku.ijk.media:ijkplayer-exo:${ijkplayer}",
+            exo_player2          : "com.google.android.exoplayer:exoplayer-core:${exo_player2}",
+            transitionseverywhere: "com.andkulikov:transitionseverywhere:${transitionseverywhere}",
+
+            //floatWindow          : "com.github.yhaolpz:FloatWindow:${floatWindow}",
+
+            glide                : "com.github.bumptech.glide:glide:${imageLoader}",
+            gson                 : "com.google.code.gson:gson:${gsonVersion}",
+            umengAnalytics       : "com.umeng.analytics:analytics:${umengAnalyticsVer}"
+    ]
+
+}

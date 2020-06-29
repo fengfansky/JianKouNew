@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="splash_title">北京箭扣科技有限公司</string>
+    <string name="app_key">jvovTXtJiOot9boBd39qS7DulkIr1Jpe</string>
+    <string name="wall_id">5615e30bfcb0f200000008bc</string>
+    <string name="default_friend_id">55bf71a93641d80000000ed9</string>
+    <string name="umeng_appkey"></string>
+    <string name="mipush_appid"></string>
+    <string name="mipush_appkey"></string>
+    <string name="app_name">IM++</string>
+    <string name="tab_title_chat">Chat</string>
+    <string name="tab_title_friend">Friends</string>
+    <string name="tab_title_explore">AppO</string>
+    <string name="tab_title_setting">Settings</string>
+    <string name="tab_title_media">Media</string>
+    <string name="tab_title_annoncement">Bulletin</string>
+    <string name="tab_coming_soon">coming soon</string>
+
+    <!-- General -->
+    <string name="welcome_message_from_default_user">你好! 我是箭扣科技Arrownock的小艾, 欢迎使用IM++ </string>
+    <string name="general_okay">OK</string>
+    <string name="general_ok">OK</string>
+    <string name="loading">Loading...</string>
+    <string name="general_cancel">Cancel</string>
+    <string name="general_press_again_to_exit">Click again to exit application</string>
+    <string name="general_no_data_error">No more data</string>
+    <string name="general_close">Close</string>
+    <string name="room_to">like you article in</string>
+    <string name="room_like"></string>
+    <string name="apply_source">Get Source Code</string>
+    
+    <!-- Login -->
+    <string name="login_sign_up">Sign Up</string>
+    <string name="login_sign_in">Login</string>
+    <string name="login_failed">Alphanumeric characters only</string>
+    <string name="login_username">User Name</string>
+    <string name="login_pwd">Password</string>
+    <string name="login_exist_name">Already existing username</string>
+    <string name="login_nickname">Nickname</string>
+    <string name="login_newuser">New User Register</string>
+    <string name="login_return">Return Login</string>
+    <string name="register_nickname">Nickname(Optional)</string>
+
+    <!-- Friend -->
+    <string name="friend_topic_list">Groups</string>
+    <string name="friend_friend_list">Friends</string>
+    <string name="friend_friend_request">Friend Request</string>
+    <string name="friend_action_new_friend">Add Friend</string>
+    <string name="friend_action_new_topic">Create Group Chat</string>
+    <string name="friend_search_username">Search by Name</string>
+    <string name="friend_request_status_add">Add</string>
+    <string name="friend_request_status_sent">Sent</string>
+    <string name="friend_request_status_requesting">Sending...</string>
+    <string name="friend_request_status_isfriend">Friends</string>
+    <string name="friend_request_status_approved">Accepted</string>
+    <string name="friend_request_status_rejected">Declined</string>
+    <string name="friend_request_search">Search by Name</string>
+    <string name="friend_list_search">Search Friends and Groups</string>
+    <string name="friend_request_sent">Sent Friend Request</string>
+    <string name="friend_request_rejected">Rejected Friend Request</string>
+    <string name="friend_request_accepted">Accepted Friend Request</string>
+    <string name="friend_request_received">Received Friend Request</string>
+    <string name="no_friend">No friend connection yet</string>
+    <string name="no_friend_request">No new friend request</string>
+    <string name="unknown_friend">Unknown Friend</string>
+
+    <!-- Chat -->
+    <string name="readed">Read</string>
+    <string name="morning">AM</string>
+    <string name="afternoon">PM</string>
+    <string name="chat_take_picture">Camera</string>
+    <string name="chat_pick_picture">Choose a Photo</string>
+    <string name="chat_record">Voice Message</string>
+    <string name="chat_voice_chat">Call</string>
+    <string name="chat_video_chat">Video Call</string>
+    <string name="chat_view_picture">View Photo</string>
+    <string name="chat_received_image"># sent you an image</string>
+    <string name="chat_received_record"># sent you a voice message</string>
+    <string name="chat_send_image">Image sent</string>
+    <string name="chat_send_record">Voice message sent</string>
+    <string name="chat_record_press">Press to record message</string>
+    <string name="chat_record_release">Release button to send</string>
+    <string name="chat_recording">Recording</string>
+    <string name="chat_record_tooshort">The message is too short</string>
+    <string name="chat_record_release_to_cancel">Release button to cancel</string>
+    <string name="chat_send">Send</string>
+    <string name="chat_record_cancel">Cancel</string>
+    <string name="chat_topic_edit">Edit Group Name</string>
+    <string name="chat_topic_invite">Invite Others</string>
+    <string name="chat_topic_leave">Leave Group</string>
+    <string name="chat_topic_leave_owner">Delete Group</string>
+    <string name="chat_delete_chat_confirm">Delete this chat?</string>
+    <string name="no_chat">No chat history</string>
+
+    <!-- Live -->
+    <string name="anlive_received_voice_invitation">Incoming Call…</string>
+    <string name="anlive_received_video_invitation">Incoming Video Call…</string>
+    <string name="anlive_voice_oncall">Call in progress…</string>
+    <string name="anlive_video_oncall">Video Call …</string>
+    <string name="anlive_waiting_reply">Waiting…</string>
+    <string name="anlive_mute">Mute</string>
+    <string name="anlive_unmute">Unmute</string>
+    <string name="anlive_hangup">End Call</string>
+    <string name="anlive_reject">Decline</string>
+    <string name="anlive_accept">Accept</string>
+    <string name="anlive_enable_camera">Camera On</string>
+    <string name="anlive_disable_camera">Camera Off</string>
+    <string name="anlive_push_call">Incoming Call</string>
+    <string name="anlive_push_video_call">Incoming Video Call</string>
+    <string name="anlive_connecting">Connecting...</string>
+
+    <!-- Settings -->
+    <string name="else_sign_out">Logout</string>
+    <string name="setting_send_msg">Chat</string>
+    <string name="setting_ok">Ok</string>
+    <string name="setting_cancel">Cancel</string>
+    <string name="setting_message">Are you sure to quit?</string>
+    <string name="setting_input_nickname">Please input nickname</string>
+    <string name="setting_change_nickname">Change Nickname</string>
+    <string name="setting_id_text">ID:</string>
+    <string name="setting_dialog_notnull">Nickname can not be empty</string>
+
+    <!-- Notification -->
+    <string name="noti_image">sent you an image</string>
+    <string name="noti_record"># sent you a voice message</string>
+    <string name="noti_voice_call">Incoming Call…</string>
+    <string name="noti_video_call">Incoming Video Call…</string>
+
+    <!-- Wall -->
+    <string name="wall_circle">Moments</string>
+    <string name="wall_room">Forums</string>
+    <string name="room_header_description">Description</string>
+    <string name="room_header_join_btn">Join</string>
+    <string name="room_header_quit_btn">Leave</string>
+    <string name="wall_like">Like</string>
+    <string name="wall_comment">Comment</string>
+    <string name="wall_create_post">Say something…</string>
+    <string name="wall_create_room">Name</string>
+    <string name="wall_create_room_description">Description</string>
+    <string name="wall_create_post_title">New Post</string>
+    <string name="wall_create_room_title">New Forum</string>
+    <string name="wall_comment_reply">Replied</string>
+    <string name="wall_create_post_error">Please enter text or photo</string>
+    <string name="wall_create_room_error">Name,  Description and Cover Photo are all required</string>
+    <string name="no_room">There are no Rooms yet. Be the first to create one ：）</string>
+
+    <!-- CustomService -->
+    <string name="cs_help_desk">Help Desk</string>
+    <string name="cs_room_list">Forums</string>
+    <string name="cs_products">Products</string>
+    <string name="cs_services">Services</string>
+    <string name="cs_contact_us">Contact Us</string>
+    <string name="cs_vip_base">Contact help desk (Basic)</string>
+    <string name="cs_vip_pro">Contact help desk (Professional)</string>
+    <string name="cs_offine">Offline</string>
+    <string name="cs_online">Online</string>
+    <string name="cs_back">Back</string>
+    <string name="no_cs">There are no customer representatives</string>
+    <string name="cs_find_custom_service">Creating new service session, hold on please...</string>
+    <string name="cs_service_ondoing_prefix">Hello ! </string>
+    <string name="cs_service_ondoing_id">ID#: </string>
+    <string name="cs_service_ondoing_buffix"> serving you</string>
+    <string name="cs_service_finished">Service has already finished</string>
+    <string name="cs_re_connect">New Service session</string>
+    <string name="cs_service_leave_msg">There are no customer representatives, please leave messages, we\'ll reply you as soon as possible</string>
+
+    <!-- IM -->
+    <string name="im_kick_off">You have been automatically logged out since you\'ve logged in this account from another device.</string>
+    <string name="im_disconnect">IM Disconnect</string>
+    <string name="im_connect">IM Connect</string>
+
+    <!-- Announce -->
+    <string name="annou_list_name">Bulletin</string>
+    <string name="annou_community_list_name">Community</string>
+    <string name="annou_comunity_create_title">New Community</string>
+    <string name="annou_comunity_create_name">Name</string>
+    <string name="annou_comunity_create_desc">Description</string>
+    <string name="annou_comunity_create_url">URL</string>
+    <string name="annou_comunity_create_error">Name, Description, URL, and Photo can\'t be empty</string>
+    <string name="annou_comunity_create_url_error">Please input valid URL</string>
+    <string name="annou_vote_users_hint">Vote Users</string>
+    <string name="annou_vote_votes_hint">Votes</string>
+    <string name="annou_vote_list_name">Vote</string>
+    <string name="annou_vote_tab_title_all">All</string>
+    <string name="annou_vote_tab_title_mine">My</string>
+    <string name="annou_vote_tab_title_join">Join</string>
+    <string name="annou_vote_create_title">New Vote</string>
+    <string name="annou_vote_create_main">Title</string>
+    <string name="annou_vote_create_desc_hint">Vote Description</string>
+    <string name="annou_vote_create_desc">Description</string>
+    <string name="annou_vote_create_choice_select">Select</string>
+    <string name="annou_vote_create_choice_my_select">My Choice</string>
+    <string name="annou_vote_create_choices">Choice</string>
+    <string name="annou_vote_create_choices_content">Content</string>
+    <string name="annou_vote_create_choices_type">Type</string>
+    <string name="annou_vote_create_single">Single</string>
+    <string name="annou_vote_create_multiple">Multiple</string>
+    <string name="annou_vote_create_add_choices">Add Choice</string>
+    <string name="annou_vote_btn_vote">Vote</string>
+    <string name="annou_vote_btn_check">Check Vote Results</string>
+    <string name="annou_vote_vote_error">Failed to vote, please check vote results</string>
+    <string name="annou_vote_no_choice">Please select one chocie at least</string>
+    <string name="annou_vote_create_error">Title, Description, and Content can\'t be empty</string>
+    <string name="annou_bulletin_list_name">Bulletin</string>
+    <string name="annou_bulletin_read">Read</string>
+    <string name="annou_bulletin_like">Like</string>
+    <string name="annou_event_list_name">Event</string>
+    <string name="annou_event_tab_title_all">All</string>
+    <string name="annou_event_tab_title_mine">My</string>
+    <string name="annou_event_tab_title_join">Join</string>
+    <string name="annou_event_create_title">New Event</string>
+    <string name="annou_event_create_main">Title</string>
+    <string name="annou_event_create_main_hint">Title</string>
+    <string name="annou_event_create_cover">Cover</string>
+    <string name="annou_event_create_desc">Information</string>
+    <string name="annou_event_create_desc_hint">Event Information</string>
+    <string name="annou_event_create_address">Address</string>
+    <string name="annou_event_create_address_hint">Please input address</string>
+    <string name="annou_event_create_starttime">Time</string>
+    <string name="annou_event_create_endtime">To</string>
+    <string name="annou_event_create_cost">Budget</string>
+    <string name="annou_event_create_cost_hint">(Optional, default value:Free)</string>
+    <string name="annou_event_create_limit_hint">(Optional, default value:No Limit)</string>
+    <string name="annou_event_create_user_limit">Limit</string>
+    <string name="annou_event_attend_uses">Attend Event</string>
+    <string name="annou_event_create_user">Creater</string>
+    <string name="annou_event_create_error">Title, Information, Address, StartTime and EndTime can\'t be empty</string>
+    <string name="annou_event_endtime_starttime_error">End Time can\'t before the Start Time</string>
+    <string name="annou_event_endtime_error">End Time can\t before now</string>
+    <string name="annou_event_cost_error">Cost must be a number</string>
+    <string name="annou_event_user_limit_error">User Limit must be a number</string>
+    <string name="annou_event_not_start">Not Start</string>
+    <string name="annou_event_ongoing">Ongoing</string>
+    <string name="annou_event_finished">Finished</string>
+    <string name="annou_event_free">Free</string>
+    <string name="annou_event_unit">RMB</string>
+    <string name="annou_event_full">Is Full</string>
+    <string name="annou_event_attend">Attend</string>
+    <string name="annou_event_quit">Quit</string>
+    <string name="annou_event_operation_failed">Operation failed, please try again later</string>
+    <string name="annou_created_at">Created at</string>
+    <string name="annou_vote_attend_prefix">Already</string>
+    <string name="annou_vote_attend_user">user</string>
+    <string name="annou_vote_attend_users">users</string>
+    <string name="annou_vote_attend_buffix">attended</string>
+    <string name="annou_vote_choice_ana">Analysis of Vote</string>
+    <string name="annou_vote_result_choice">Choice</string>
+    <string name="annou_event_attended_user_list_title">Attended User list</string>
+    <string name="annou_piechart_vote">vote</string>
+    <string name="annou_piechart_votes">votes</string>
+    <string name="annou_vote_count_prefix">Total</string>
+    <string name="no_annou_bulletin">No Bulletins</string>
+    <string name="no_annou_event">There are no Events yet. Be the first to create one :)</string>
+    <string name="no_annou_vote">There are no Votes yet. Be the first to create one :)</string>
+    <string name="no_annou_community">There are no Communities yet. Be the first to create one :)</string>
+
+    <!-- datetimepicker -->
+    <string name="done_label">Done</string>
+    <string name="hour_picker_description">Hours circular slider</string>
+    <string name="minute_picker_description">Minutes circular slider</string>
+    <string name="select_hours">Select hours</string>
+    <string name="select_minutes">Select minutes</string>
+    <string name="day_picker_description">Month grid of days</string>
+    <string name="year_picker_description">Year list</string>
+    <string name="select_day">Select month and day</string>
+    <string name="select_year">Select year</string>
+    <string name="item_is_selected"><xliff:g id="item" example="2013">%1$s</xliff:g> selected</string>
+    <string name="deleted_key"><xliff:g id="key" example="4">%1$s</xliff:g> deleted</string>
+    <string name="time_placeholder">--</string>
+    <string name="time_separator">:</string>
+    <string name="radial_numbers_typeface">sans-serif</string>
+    <string name="sans_serif">sans-serif</string>
+    <string name="day_of_week_label_typeface">sans-serif</string>
+
+    <!-- Room -->
+    <string name="room_list_name">Group members</string>
+    <string name="notifi_create_group">created group</string>
+    <string name="notifi_update_group">change group name to</string>
+    <string name="notifi_add_group">add to group</string>
+    <string name="notifi_quit_group">quit group</string>
+
+</resources>
