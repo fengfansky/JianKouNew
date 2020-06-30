@@ -1,5 +1,6 @@
 package co.herxun.impp.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,7 +12,7 @@ import co.herxun.impp.R;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 
-public class ApplySourceCodeActivity extends BaseActivity {
+public class ApplySourceCodeActivity extends Activity {
     private AppBar appbar;
     private WebView webview;
     private RelativeLayout rlParentView;

@@ -8,6 +8,8 @@ import co.herxun.impp.adapter.FriendRequestListAdapter;
 import co.herxun.impp.im.controller.IMManager;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
+
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,7 +17,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class FriendRequestActivity extends BaseActivity implements Observer{
+public class FriendRequestActivity extends Activity implements Observer{
 	private AppBar mAppbar;
 	private ListView mListView;
 	private FriendRequestListAdapter mFriendRequestListAdapter;

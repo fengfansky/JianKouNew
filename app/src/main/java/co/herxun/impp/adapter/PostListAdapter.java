@@ -154,7 +154,7 @@ public class PostListAdapter extends BaseAdapter {
                                 });
                     } else {
                         roomManager.triggerLikeButton(UserManager.getInstance(ct).getCurrentUser(), data,
-                                new co.herxun.impp.controller.RoomManager.LikeCallback() {
+                                new RoomManager.LikeCallback() {
                                     @Override
                                     public void onFailure(Post post) {
                                         btnLike.setEnabled(true);

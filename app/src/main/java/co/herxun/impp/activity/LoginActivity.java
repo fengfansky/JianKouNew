@@ -3,6 +3,7 @@ package co.herxun.impp.activity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
@@ -26,7 +27,7 @@ import co.herxun.impp.view.MaterialEditText;
 
 import com.arrownock.social.IAnSocialCallback;
 
-public class LoginActivity extends BaseActivity {
+public class LoginActivity extends Activity {
     private MaterialEditText etUsername, etPwd;
     private Button btnSignIn;
     private TextView btnRegister;
@@ -116,13 +117,13 @@ public class LoginActivity extends BaseActivity {
         // btnSignUp.setOnClickListener(new OnClickListener() {
         // @Override
         // public void onClick(View v) {
-        // showLoading();
+        // // showLoading();
         // UserManager.getInstance(LoginActivity.this).signUp(etUsername.getEditText().getText().toString(),
         // etPwd.getEditText().getText().toString(), new IAnSocialCallback() {
         // @Override
         // public void onFailure(JSONObject arg0) {
         // try {
-        // dismissLoading();
+        // // dismissLoading();
         // String errorMsg = arg0.getJSONObject("meta").getString("message");
         // int errorCode = arg0.getJSONObject("meta").getInt("errorCode");
         // if (errorCode == -101200) {
@@ -135,7 +136,7 @@ public class LoginActivity extends BaseActivity {
         // }
         // } catch (JSONException e) {
         // e.printStackTrace();
-        // dismissLoading();
+        // // dismissLoading();
         // }
         // }
         //
@@ -148,7 +149,7 @@ public class LoginActivity extends BaseActivity {
         // afterLogin(user);
         // } catch (JSONException e) {
         // e.printStackTrace();
-        // dismissLoading();
+        // // dismissLoading();
         // }
         // }
         // });
@@ -159,17 +160,17 @@ public class LoginActivity extends BaseActivity {
         btnSignIn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                showLoading();
+//                // showLoading();
                 UserManager.getInstance(LoginActivity.this).login(etUsername.getEditText().getText().toString(),
                         etPwd.getEditText().getText().toString(), new IAnSocialCallback() {
                             @Override
                             public void onFailure(JSONObject arg0) {
                                 try {
-                                    dismissLoading();
+//                                    // dismissLoading();
                                     String errorMsg = arg0.getJSONObject("meta").getString("message");
                                     Toast.makeText(getBaseContext(), errorMsg, Toast.LENGTH_LONG).show();
                                 } catch (JSONException e) {
-                                    dismissLoading();
+//                                    // dismissLoading();
                                     e.printStackTrace();
                                 }
                             }
@@ -182,7 +183,7 @@ public class LoginActivity extends BaseActivity {
                                     afterLogin(user);
                                 } catch (JSONException e) {
                                     e.printStackTrace();
-                                    dismissLoading();
+//                                    // dismissLoading();
                                 }
                             }
                         });
@@ -229,7 +230,7 @@ public class LoginActivity extends BaseActivity {
             i.putExtra(Constant.INTENT_EXTRA_KEY_PAYLOAD, payload);
         }
         startActivity(i);
-        dismissLoading();
+//        // dismissLoading();
         finish();
     }
 

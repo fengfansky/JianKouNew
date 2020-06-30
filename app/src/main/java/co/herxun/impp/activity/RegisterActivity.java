@@ -3,6 +3,7 @@ package co.herxun.impp.activity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
@@ -26,7 +27,7 @@ import co.herxun.impp.view.MaterialEditText;
 
 import com.arrownock.social.IAnSocialCallback;
 
-public class RegisterActivity extends BaseActivity {
+public class RegisterActivity extends Activity {
 
     private Button btnRegister;
     private MaterialEditText etUsername, etPwd, etNickname;
@@ -91,19 +92,19 @@ public class RegisterActivity extends BaseActivity {
 
             @Override
             public void onClick(View v) {
-                showLoading();
+//                // showLoading();
                 UserManager.getInstance(RegisterActivity.this).signUp(etUsername.getEditText().getText().toString(),
                         etPwd.getEditText().getText().toString(), etNickname.getEditText().getText().toString(),
                         new IAnSocialCallback() {
                             @Override
                             public void onFailure(JSONObject arg0) {
                                 try {
-                                    dismissLoading();
+                                    // dismissLoading();
                                     String errorMsg = arg0.getJSONObject("meta").getString("message");
                                     Toast.makeText(getBaseContext(), errorMsg, Toast.LENGTH_LONG).show();
                                 } catch (JSONException e) {
                                     e.printStackTrace();
-                                    dismissLoading();
+                                    // dismissLoading();
                                 }
                             }
 
@@ -117,7 +118,7 @@ public class RegisterActivity extends BaseActivity {
 
                                 } catch (JSONException e) {
                                     e.printStackTrace();
-                                    dismissLoading();
+                                    // dismissLoading();
                                 }
                             }
                         });
@@ -171,7 +172,7 @@ public class RegisterActivity extends BaseActivity {
             i.putExtra(Constant.INTENT_EXTRA_KEY_PAYLOAD, payload);
         }
         startActivity(i);
-        dismissLoading();
+        // dismissLoading();
         finish();
     }
 

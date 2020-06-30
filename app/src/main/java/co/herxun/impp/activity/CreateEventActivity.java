@@ -1,6 +1,14 @@
 package co.herxun.impp.activity;
 
+import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -23,20 +31,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AlertDialog;
-
-import com.android.datetimepicker.date.DatePickerDialog;
-import com.android.datetimepicker.time.RadialPickerLayout;
-import com.android.datetimepicker.time.TimePickerDialog;
-
-import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
 import co.herxun.impp.R;
 import co.herxun.impp.controller.EventManager;
 import co.herxun.impp.controller.EventManager.CreateEventCallback;
@@ -48,7 +42,11 @@ import co.herxun.impp.utils.ImageUtility;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 
-public class CreateEventActivity extends BaseActivity implements DatePickerDialog.OnDateSetListener,
+import com.android.datetimepicker.date.DatePickerDialog;
+import com.android.datetimepicker.time.RadialPickerLayout;
+import com.android.datetimepicker.time.TimePickerDialog;
+
+public class CreateEventActivity extends Activity implements DatePickerDialog.OnDateSetListener,
         TimePickerDialog.OnTimeSetListener {
     private AppBar appbar;
     private EditText etTitle, etInformation, etAddress, etCost, etUserLimit;
@@ -93,7 +91,7 @@ public class CreateEventActivity extends BaseActivity implements DatePickerDialo
         appbar.getMenuItemView().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                showLoading();
+                // showLoading();
                 createEvent();
             }
         });
@@ -141,9 +139,9 @@ public class CreateEventActivity extends BaseActivity implements DatePickerDialo
             @Override
             public void onClick(View v) {
                 isClickStart = true;
-//               TODO  DatePickerDialog.newInstance(CreateEventActivity.this, startCalendar.get(Calendar.YEAR),
-//                        startCalendar.get(Calendar.MONTH), startCalendar.get(Calendar.DAY_OF_MONTH)).show(
-//                        getSupportFragmentManager(), "datePicker");
+                DatePickerDialog.newInstance(CreateEventActivity.this, startCalendar.get(Calendar.YEAR),
+                        startCalendar.get(Calendar.MONTH), startCalendar.get(Calendar.DAY_OF_MONTH)).show(
+                        getFragmentManager(), "datePicker");
             }
         });
         ll_enddate.setOnClickListener(new OnClickListener() {
@@ -151,9 +149,9 @@ public class CreateEventActivity extends BaseActivity implements DatePickerDialo
             @Override
             public void onClick(View v) {
                 isClickStart = false;
-//             TODO   DatePickerDialog.newInstance(CreateEventActivity.this, endCalendar.get(Calendar.YEAR),
-//                        endCalendar.get(Calendar.MONTH), endCalendar.get(Calendar.DAY_OF_MONTH)).show(
-//                        getSupportFragmentManager(), "datePicker");
+                DatePickerDialog.newInstance(CreateEventActivity.this, endCalendar.get(Calendar.YEAR),
+                        endCalendar.get(Calendar.MONTH), endCalendar.get(Calendar.DAY_OF_MONTH)).show(
+                        getFragmentManager(), "datePicker");
             }
         });
 
@@ -210,12 +208,12 @@ public class CreateEventActivity extends BaseActivity implements DatePickerDialo
     public void onDateSet(DatePickerDialog dialog, int year, int monthOfYear, int dayOfMonth) {
         if (isClickStart) {
             startCalendar.set(year, monthOfYear, dayOfMonth);
-            //TODO TimePickerDialog.newInstance(this, startCalendar.get(Calendar.HOUR_OF_DAY),
-                   // startCalendar.get(Calendar.MINUTE), true).show(getSupportFragmentManager(), "timePicker");
+            TimePickerDialog.newInstance(this, startCalendar.get(Calendar.HOUR_OF_DAY),
+                    startCalendar.get(Calendar.MINUTE), true).show(getFragmentManager(), "timePicker");
         } else {
             endCalendar.set(year, monthOfYear, dayOfMonth);
-           //TODO  TimePickerDialog.newInstance(this, endCalendar.get(Calendar.HOUR_OF_DAY), endCalendar.get(Calendar.MINUTE),
-                  //  true).show(getSupportFragmentManager(), "timePicker");
+            TimePickerDialog.newInstance(this, endCalendar.get(Calendar.HOUR_OF_DAY), endCalendar.get(Calendar.MINUTE),
+                    true).show(getFragmentManager(), "timePicker");
         }
     }
 
@@ -245,17 +243,17 @@ public class CreateEventActivity extends BaseActivity implements DatePickerDialo
         if (etTitle.getText().toString().length() == 0 || etInformation.getText().toString().length() == 0
                 || tvStartdate.getText().toString().length() == 0 || tvEnddate.getText().toString().length() == 0
                 || etAddress.getText().toString().length() == 0) {
-            dismissLoading();
+            // dismissLoading();
             Toast.makeText(this, getString(R.string.annou_event_create_error), Toast.LENGTH_LONG).show();
             return;
         }
         if (endCalendar.before(startCalendar)) {
-            dismissLoading();
+            // dismissLoading();
             Toast.makeText(this, getString(R.string.annou_event_endtime_starttime_error), Toast.LENGTH_LONG).show();
             return;
         }
         if (endCalendar.before(Calendar.getInstance())) {
-            dismissLoading();
+            // dismissLoading();
             Toast.makeText(this, getString(R.string.annou_event_endtime_error), Toast.LENGTH_LONG).show();
             return;
         }
@@ -265,7 +263,7 @@ public class CreateEventActivity extends BaseActivity implements DatePickerDialo
             try {
                 cost = new BigDecimal(etCost.getText().toString());
             } catch (Exception e) {
-                dismissLoading();
+                // dismissLoading();
                 Toast.makeText(this, getString(R.string.annou_event_cost_error), Toast.LENGTH_LONG).show();
                 return;
             }
@@ -275,7 +273,7 @@ public class CreateEventActivity extends BaseActivity implements DatePickerDialo
             try {
                 userLimit = Integer.parseInt(etUserLimit.getText().toString());
             } catch (Exception e) {
-                dismissLoading();
+                // dismissLoading();
                 Toast.makeText(this, getString(R.string.annou_event_user_limit_error), Toast.LENGTH_LONG).show();
                 return;
             }
@@ -291,7 +289,7 @@ public class CreateEventActivity extends BaseActivity implements DatePickerDialo
             @Override
             public void onSuccess(Event event) {
                 DBug.e("createEvent.onSuccess", event.eventId);
-                dismissLoading();
+                // dismissLoading();
                 setResult(Activity.RESULT_OK);
                 onBackPressed();
             }
@@ -302,7 +300,7 @@ public class CreateEventActivity extends BaseActivity implements DatePickerDialo
                 appbar.getMenuItemView().setEnabled(true);
                 runOnUiThread(new Runnable() {
                     public void run() {
-                        dismissLoading();
+                        // dismissLoading();
                         Toast.makeText(getBaseContext(), exception, Toast.LENGTH_LONG).show();
                     }
                 });

@@ -1,5 +1,6 @@
 package co.herxun.impp.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +10,7 @@ import co.herxun.impp.R;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 
-public class HelpDeskActivity extends BaseActivity {
+public class HelpDeskActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

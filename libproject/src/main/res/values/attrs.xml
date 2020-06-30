@@ -105,6 +105,9 @@
         <attr name="actionBarWidgetTheme" format="reference" />
         <!-- Size of the Action Bar, including the contextual
              bar used to present Action Modes. -->
+  <!--      <attr name="actionBarSize" format="dimension" >
+            <enum name="wrap_content" value="0" />
+        </attr>-->
         <!-- Custom divider drawable to use for elements in the action bar. -->
         <attr name="actionBarDivider" format="reference" />
         <!-- Custom item state list drawable background for action bar items. -->

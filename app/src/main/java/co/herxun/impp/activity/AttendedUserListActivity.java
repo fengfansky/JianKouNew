@@ -1,5 +1,9 @@
 package co.herxun.impp.activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,12 +12,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import co.herxun.impp.R;
 import co.herxun.impp.adapter.AttendedUserListAdapter;
 import co.herxun.impp.controller.EventManager;
@@ -24,7 +22,7 @@ import co.herxun.impp.utils.Constant;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 
-public class AttendedUserListActivity extends BaseActivity {
+public class AttendedUserListActivity extends Activity {
     private ListView listviewAttendedUsers;
     private AttendedUserListAdapter adapter;
     private EventManager eventManager;
@@ -92,7 +90,7 @@ public class AttendedUserListActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == AppCompatActivity.RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
             initData();
         }
     }

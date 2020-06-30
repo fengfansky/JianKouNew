@@ -29,10 +29,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.arrownock.im.callback.AnIMMessageSentCallbackData;
-import com.arrownock.im.callback.AnIMReadACKCallbackData;
-
 import co.herxun.impp.R;
 import co.herxun.impp.adapter.MessageListAdapter;
 import co.herxun.impp.controller.UserManager;
@@ -47,6 +43,8 @@ import co.herxun.impp.model.User;
 import co.herxun.impp.utils.DBug;
 import co.herxun.impp.utils.Utils;
 
+import com.arrownock.im.callback.AnIMMessageSentCallbackData;
+import com.arrownock.im.callback.AnIMReadACKCallbackData;
 
 public class ChatView extends RelativeLayout implements Observer {
     private Context ct;

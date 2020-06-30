@@ -1,6 +1,18 @@
 package co.herxun.impp.activity;
 
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONObject;
+
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -27,18 +39,6 @@ import android.widget.ImageView.ScaleType;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AlertDialog;
-
-import com.arrownock.exception.ArrownockException;
-import com.arrownock.im.callback.IAnIMTopicCallback;
-import com.arrownock.social.IAnSocialCallback;
-
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import co.herxun.impp.R;
 import co.herxun.impp.controller.SocialManager;
 import co.herxun.impp.im.controller.IMManager;
@@ -49,7 +49,11 @@ import co.herxun.impp.utils.SpfHelper;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 
-public class CreateRoomActivity extends BaseActivity {
+import com.arrownock.exception.ArrownockException;
+import com.arrownock.im.callback.IAnIMTopicCallback;
+import com.arrownock.social.IAnSocialCallback;
+
+public class CreateRoomActivity extends Activity {
     private AppBar appbar;
     private EditText etContent, etDescription;
     private GridView gdPhotos;
@@ -89,7 +93,7 @@ public class CreateRoomActivity extends BaseActivity {
         appbar.getMenuItemView().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                showLoading();
+                // showLoading();
                 createRoom();
             }
         });
@@ -162,7 +166,7 @@ public class CreateRoomActivity extends BaseActivity {
         }
         if (data.isEmpty() || etContent.getText().toString().length() == 0
                 || etDescription.getText().toString().length() == 0) {
-            dismissLoading();
+            // dismissLoading();
             Toast.makeText(this, getString(R.string.wall_create_room_error), Toast.LENGTH_LONG).show();
             return;
         }
@@ -182,7 +186,7 @@ public class CreateRoomActivity extends BaseActivity {
                                 appbar.getMenuItemView().setEnabled(true);
                                 runOnUiThread(new Runnable() {
                                     public void run() {
-                                        dismissLoading();
+                                        // dismissLoading();
                                         Toast.makeText(getBaseContext(), arg0.toString(), Toast.LENGTH_LONG).show();
                                     }
                                 });
@@ -191,7 +195,7 @@ public class CreateRoomActivity extends BaseActivity {
                             @Override
                             public void onSuccess(JSONObject arg0) {
                                 DBug.e("createPost.onSuccess", arg0.toString());
-                                dismissLoading();
+                                // dismissLoading();
                                 setResult(Activity.RESULT_OK);
                                 onBackPressed();
                             }
@@ -203,7 +207,7 @@ public class CreateRoomActivity extends BaseActivity {
             public void onError(final ArrownockException arg0) {
                 runOnUiThread(new Runnable() {
                     public void run() {
-                        dismissLoading();
+                        // dismissLoading();
                         Toast.makeText(getBaseContext(), arg0.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });

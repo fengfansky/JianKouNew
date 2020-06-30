@@ -125,7 +125,7 @@
                     android:focusable="true"
                     android:contentDescription="@string/abc_searchview_description_submit" />
 
-            <ImageView
+            <android.support.v7.internal.widget.TintImageView
                     android:id="@+id/search_voice_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"

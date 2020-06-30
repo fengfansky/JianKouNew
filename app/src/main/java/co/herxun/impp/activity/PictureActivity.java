@@ -1,5 +1,6 @@
 package co.herxun.impp.activity;
 
+import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -14,7 +15,7 @@ import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 import co.herxun.impp.view.TouchImageView;
 
-public class PictureActivity extends BaseActivity {
+public class PictureActivity extends Activity {
 	private AppBar mAppbar;
 	private TouchImageView mTouchImageView;
 	

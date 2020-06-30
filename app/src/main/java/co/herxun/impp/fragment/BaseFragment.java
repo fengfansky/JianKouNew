@@ -4,9 +4,8 @@ package co.herxun.impp.fragment;
 import co.herxun.impp.R;
 import co.herxun.impp.view.SlidingTabLayout;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.View;
-
-import androidx.fragment.app.Fragment;
 
 public class BaseFragment extends Fragment {
 	protected String title = "";

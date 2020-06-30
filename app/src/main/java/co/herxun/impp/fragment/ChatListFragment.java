@@ -1,5 +1,8 @@
 package co.herxun.impp.fragment;
 
+import java.util.Observable;
+
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,11 +16,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AlertDialog;
-
-import java.util.Observable;
-
 import co.herxun.impp.R;
 import co.herxun.impp.activity.ChatActivity;
 import co.herxun.impp.adapter.ChatListAdapter;

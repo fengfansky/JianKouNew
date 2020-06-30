@@ -2,11 +2,9 @@ package co.herxun.impp.adapter;
 
 import java.util.List;
 
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import co.herxun.impp.fragment.BaseFragment;
 
 public class FragmentPagerAdapter extends FragmentStatePagerAdapter {

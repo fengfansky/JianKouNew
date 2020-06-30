@@ -11,6 +11,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
@@ -46,7 +47,7 @@ import com.arrownock.social.AnSocial;
 import com.arrownock.social.AnSocialMethod;
 import com.arrownock.social.IAnSocialCallback;
 
-public class CustomServiceBaseActivity extends BaseActivity {
+public class CustomServiceBaseActivity extends Activity {
     private ListView listView;
     private MemberListAdapter adapter;
     private Handler handler;
@@ -58,7 +59,7 @@ public class CustomServiceBaseActivity extends BaseActivity {
         setContentView(R.layout.activity_custom_service);
 
         initView();
-        showLoading();
+        // showLoading();
         initData();
     }
 
@@ -115,7 +116,7 @@ public class CustomServiceBaseActivity extends BaseActivity {
                     anSocial.sendRequest("users/query.json", AnSocialMethod.GET, params, new IAnSocialCallback() {
                         @Override
                         public void onFailure(JSONObject response) {
-                            dismissLoading();
+                            // dismissLoading();
                             DBug.e("fetchCSUnit.onFailure", response.toString());
                         }
 
@@ -143,7 +144,7 @@ public class CustomServiceBaseActivity extends BaseActivity {
                                 handler.post(new Runnable() {
                                     @Override
                                     public void run() {
-                                        dismissLoading();
+                                        // dismissLoading();
                                         adapter.applyData(data);
                                         getCSUnitStatus(adapter.getClientIdSet());
                                         
@@ -155,13 +156,13 @@ public class CustomServiceBaseActivity extends BaseActivity {
                                     }
                                 });
                             } catch (JSONException e) {
-                                dismissLoading();
+                                // dismissLoading();
                                 e.printStackTrace();
                             }
                         }
                     });
                 } catch (ArrownockException e) {
-                    dismissLoading();
+                    // dismissLoading();
                     e.printStackTrace();
                 }
             }

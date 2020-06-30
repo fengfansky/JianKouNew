@@ -21,7 +21,7 @@ import co.herxun.impp.utils.Constant;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 
-public class RoomUserListActivity extends BaseActivity {
+public class RoomUserListActivity extends Activity {
     private ListView roomUserListView;
 
     private UserListInRoomAdapter adapter;

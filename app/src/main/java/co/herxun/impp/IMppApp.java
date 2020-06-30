@@ -34,7 +34,6 @@ public class IMppApp extends Application {
 
     @Override
     public void onCreate() {
-        super.onCreate();
         init();
     }
 

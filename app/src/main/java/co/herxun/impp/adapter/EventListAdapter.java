@@ -8,6 +8,7 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -16,9 +17,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import androidx.cardview.widget.CardView;
-
 import co.herxun.impp.R;
 import co.herxun.impp.activity.EventDetailActivity;
 import co.herxun.impp.controller.EventManager;

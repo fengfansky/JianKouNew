@@ -1,16 +1,14 @@
 package co.herxun.impp.activity;
 
+import java.util.List;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.List;
-
 import co.herxun.impp.R;
 import co.herxun.impp.controller.BulletinManager;
 import co.herxun.impp.model.Bulletin;
@@ -18,7 +16,7 @@ import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 import co.herxun.impp.view.BulletinView;
 
-public class BulletinListActivity extends BaseActivity {
+public class BulletinListActivity extends Activity {
     private BulletinView bulletinView;
     private TextView noBulletinLabel;
 
@@ -62,7 +60,7 @@ public class BulletinListActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == AppCompatActivity.RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
             initData();
         }
     }

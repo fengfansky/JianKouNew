@@ -1,5 +1,11 @@
 package co.herxun.impp.activity;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,14 +17,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.arrownock.exception.ArrownockException;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import co.herxun.impp.R;
 import co.herxun.impp.controller.RoomManager;
 import co.herxun.impp.controller.RoomManager.AddTopicMembersCallback;
@@ -37,7 +35,9 @@ import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 import co.herxun.impp.view.RoomWallView;
 
-public class RoomDetailActivity extends BaseActivity {
+import com.arrownock.exception.ArrownockException;
+
+public class RoomDetailActivity extends Activity {
     private AppBar appbar;
     private RoomWallView mWallView;
     private FrameLayout header;
@@ -134,7 +134,7 @@ public class RoomDetailActivity extends BaseActivity {
             joinBtn.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    showLoading();
+                    // showLoading();
                     Topic topic = new Topic();
                     topic.topicId = room.topicId;
                     final Topic t = topic.getFromTable();
@@ -150,14 +150,14 @@ public class RoomDetailActivity extends BaseActivity {
                                                 public void onFinish(String roomId) {
                                                     t.delete();
                                                     finish();
-                                                    dismissLoading();
+                                                    // dismissLoading();
                                                 }
 
                                                 @Override
                                                 public void onFailure(final String errorMsg) {
                                                     runOnUiThread(new Runnable() {
                                                         public void run() {
-                                                            dismissLoading();
+                                                            // dismissLoading();
                                                             Toast.makeText(getBaseContext(), errorMsg,
                                                                     Toast.LENGTH_LONG).show();
                                                         }
@@ -171,7 +171,7 @@ public class RoomDetailActivity extends BaseActivity {
                                 public void onError(final ArrownockException error) {
                                     runOnUiThread(new Runnable() {
                                         public void run() {
-                                            dismissLoading();
+                                            // dismissLoading();
                                             Toast.makeText(getBaseContext(), error.getMessage(), Toast.LENGTH_LONG)
                                                     .show();
                                         }
@@ -188,7 +188,7 @@ public class RoomDetailActivity extends BaseActivity {
             joinBtn.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    showLoading();
+                    // showLoading();
                     IMManager.getInstance(RoomDetailActivity.this).addTopicMembers(me.clientId, room.topicId,
                             new AddTopicCallback() {
 
@@ -205,7 +205,7 @@ public class RoomDetailActivity extends BaseActivity {
                                         public void onFailure(final String errorMsg) {
                                             runOnUiThread(new Runnable() {
                                                 public void run() {
-                                                    dismissLoading();
+                                                    // dismissLoading();
                                                     Toast.makeText(getBaseContext(), errorMsg, Toast.LENGTH_LONG)
                                                             .show();
                                                 }
@@ -218,7 +218,7 @@ public class RoomDetailActivity extends BaseActivity {
                                 public void onError(final ArrownockException error) {
                                     runOnUiThread(new Runnable() {
                                         public void run() {
-                                            dismissLoading();
+                                            // dismissLoading();
                                             Toast.makeText(getBaseContext(), error.getMessage(), Toast.LENGTH_LONG)
                                                     .show();
                                         }
@@ -249,13 +249,13 @@ public class RoomDetailActivity extends BaseActivity {
                 }
             }
         });
-        dismissLoading();
+        // dismissLoading();
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == AppCompatActivity.RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
             initData();
         }
     }

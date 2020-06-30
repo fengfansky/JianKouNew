@@ -7,6 +7,7 @@ import java.util.Map;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -16,9 +17,6 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
-
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import co.herxun.impp.R;
 import co.herxun.impp.activity.VoteListActivity;
 import co.herxun.impp.adapter.VoteListAdapter;

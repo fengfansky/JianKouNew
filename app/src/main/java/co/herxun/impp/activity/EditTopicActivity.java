@@ -1,5 +1,6 @@
 package co.herxun.impp.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
@@ -14,7 +15,7 @@ import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 import co.herxun.impp.view.MaterialEditText;
 
-public class EditTopicActivity extends BaseActivity {
+public class EditTopicActivity extends Activity {
 	private AppBar mAppBar;
 	private MaterialEditText etTopicName;
 	private Topic mTopic;

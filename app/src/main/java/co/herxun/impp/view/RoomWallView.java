@@ -7,6 +7,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 import android.content.Context;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -16,9 +17,6 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
-
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import co.herxun.impp.R;
 import co.herxun.impp.adapter.PostListAdapter;
 import co.herxun.impp.controller.RoomManager;

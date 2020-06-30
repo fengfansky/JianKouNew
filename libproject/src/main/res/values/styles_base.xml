@@ -62,7 +62,7 @@
     </style>
 
     <style name="Base.Widget.AppCompat.ActionButton" parent="">
-        <item name="background">?attr/actionBarItemBackground</item>
+        <item name="android:background">?attr/actionBarItemBackground</item>
         <item name="android:paddingLeft">12dip</item>
         <item name="android:paddingRight">12dip</item>
         <item name="android:minWidth">@dimen/abc_action_button_min_width_material</item>
@@ -74,12 +74,12 @@
     </style>
 
     <style name="Base.Widget.AppCompat.ActionButton.CloseMode">
-        <item name="background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
     </style>
 
     <style name="Base.Widget.AppCompat.ActionButton.Overflow">
         <item name="android:src">@drawable/abc_ic_menu_moreoverflow_mtrl_alpha</item>
-        <item name="background">?attr/actionBarItemBackground</item>
+        <item name="android:background">?attr/actionBarItemBackground</item>
         <item name="android:contentDescription">@string/abc_action_menu_overflow_description</item>
         <item name="android:minWidth">@dimen/abc_action_button_min_width_overflow_material</item>
         <item name="android:minHeight">@dimen/abc_action_button_min_height_material</item>
@@ -96,7 +96,7 @@
     </style>
 
     <style name="Base.Widget.AppCompat.ActionBar.TabView" parent="">
-        <item name="background">@drawable/abc_tab_indicator_material</item>
+        <item name="android:background">@drawable/abc_tab_indicator_material</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:paddingLeft">16dip</item>
         <item name="android:paddingRight">16dip</item>
@@ -106,7 +106,7 @@
     </style>
 
     <style name="Base.Widget.AppCompat.Light.ActionBar.TabView" parent="Base.Widget.AppCompat.ActionBar.TabView">
-        <item name="background">@drawable/abc_tab_indicator_material</item>
+        <item name="android:background">@drawable/abc_tab_indicator_material</item>
     </style>
 
     <style name="Base.Widget.AppCompat.ActionBar.TabText" parent="">
@@ -181,7 +181,7 @@
     <!-- Spinner Widgets -->
 
     <style name="Base.Widget.AppCompat.Spinner" parent="android:Widget.Spinner">
-        <item name="background">@drawable/abc_spinner_mtrl_am_alpha</item>
+        <item name="android:background">@drawable/abc_spinner_mtrl_am_alpha</item>
         <item name="android:dropDownSelector">?attr/listChoiceBackgroundIndicator</item>
         <item name="android:dropDownVerticalOffset">0dip</item>
     </style>
@@ -190,7 +190,7 @@
         <item name="spinnerMode">dropdown</item>
 
         <item name="android:clickable">true</item>
-        <item name="background">@drawable/abc_spinner_mtrl_am_alpha</item>
+        <item name="android:background">@drawable/abc_spinner_mtrl_am_alpha</item>
         <item name="android:dropDownSelector">?attr/listChoiceBackgroundIndicator</item>
         <item name="android:popupBackground">@drawable/abc_popup_background_mtrl_mult</item>
         <item name="android:dropDownVerticalOffset">0dip</item>
@@ -211,7 +211,7 @@
 
     <style name="Base.Widget.AppCompat.ListView.DropDown" parent="android:Widget.ListView">
         <item name="android:listSelector">?attr/listChoiceBackgroundIndicator</item>
-        <item name="divider">@null</item>
+        <item name="android:divider">@null</item>
     </style>
 
     <style name="Base.TextAppearance.AppCompat.Widget.DropDownItem"
@@ -226,7 +226,7 @@
 
     <style name="Base.Widget.AppCompat.ListView.Menu" parent="android:Widget.ListView.Menu">
         <item name="android:listSelector">?attr/listChoiceBackgroundIndicator</item>
-        <item name="divider">?attr/dividerHorizontal</item>
+        <item name="android:divider">?attr/dividerHorizontal</item>
     </style>
 
     <style name="Base.Widget.AppCompat.ListPopupWindow" parent="">
@@ -292,7 +292,7 @@
 
     <style name="Base.Widget.AppCompat.ActivityChooserView" parent="">
         <item name="android:gravity">center</item>
-        <item name="background">@drawable/abc_ab_share_pack_holo_dark</item>
+        <item name="android:background">@drawable/abc_ab_share_pack_holo_dark</item>
         <item name="divider">?attr/dividerVertical</item>
         <item name="showDividers">middle</item>
         <item name="dividerPadding">6dip</item>
@@ -300,7 +300,7 @@
 
     <style name="Base.Widget.AppCompat.Light.ActivityChooserView"
            parent="Base.Widget.AppCompat.ActivityChooserView">
-        <item name="background">@drawable/abc_ab_share_pack_holo_light</item>
+        <item name="android:background">@drawable/abc_ab_share_pack_holo_light</item>
     </style>
 
     <style name="Base.Widget.AppCompat.PopupWindow" parent="android:Widget.PopupWindow">
@@ -320,7 +320,7 @@
     <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="android:Widget">
         <item name="android:minWidth">56dp</item>
         <item name="android:scaleType">center</item>
-        <item name="background">?attr/selectableItemBackground</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
     </style>
 
     <style name="Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
@@ -344,7 +344,7 @@
     </style>
 
     <style name="Base.Widget.AppCompat.EditText" parent="android:Widget.EditText">
-        <item name="background">?attr/editTextBackground</item>
+        <item name="android:background">?attr/editTextBackground</item>
         <item name="android:textColor">?attr/editTextColor</item>
         <item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
     </style>
@@ -364,7 +364,7 @@
         <item name="track">@drawable/abc_switch_track_mtrl_alpha</item>
         <item name="android:thumb">@drawable/abc_switch_thumb_material</item>
         <item name="switchTextAppearance">@style/TextAppearance.AppCompat.Widget.Switch</item>
-        <item name="background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
         <item name="showText">false</item>
     </style>
 

@@ -22,6 +22,7 @@ import android.graphics.PointF;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
@@ -33,12 +34,11 @@ import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
+import android.widget.ImageView;
 import android.widget.OverScroller;
 import android.widget.Scroller;
 
-import androidx.appcompat.widget.AppCompatImageView;
-
-public class TouchImageView extends AppCompatImageView {
+public class TouchImageView extends ImageView {
 	
 	private static final String DEBUG = "DEBUG";
 	

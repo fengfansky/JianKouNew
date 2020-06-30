@@ -4,6 +4,7 @@ import java.util.Date;
 
 import android.animation.Animator;
 import android.animation.Animator.AnimatorListener;
+import android.app.Activity;
 import android.content.Context;
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -35,7 +36,7 @@ import com.arrownock.live.LocalVideoView;
 import com.arrownock.live.VideoState;
 import com.arrownock.live.VideoView;
 
-public class VideoActivity extends BaseActivity implements IAnLiveEventListener {
+public class VideoActivity extends Activity implements IAnLiveEventListener {
     public static VideoActivity instance;
     private Button btnAnswer, btnReject, btnMute, btnDisableCamera, btnHangUp;
     private FrameLayout remoteVideoView, localVideoView, userInfoFrame;

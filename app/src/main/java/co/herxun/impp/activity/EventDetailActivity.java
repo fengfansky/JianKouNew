@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,7 +29,7 @@ import co.herxun.impp.utils.Constant;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 
-public class EventDetailActivity extends BaseActivity {
+public class EventDetailActivity extends Activity {
     private AppBar appbar;
     private Event event;
     private ImageView ivEventPhoto, ivPostLike, ivUserPhoto;
@@ -274,14 +275,14 @@ public class EventDetailActivity extends BaseActivity {
     }
 
     private void attendEvent() {
-        showLoading();
+        // showLoading();
         eventManager.attendEvent(event, new processEventCallback() {
 
             @Override
             public void onFinish(final boolean isOk) {
                 runOnUiThread(new Runnable() {
                     public void run() {
-                        dismissLoading();
+                        // dismissLoading();
                         if (isOk) {
                             if (event.attendedUserIds != null && event.attendedUserIds.length() > 0) {
                                 event.attendedUserIds = event.attendedUserIds + ","
@@ -305,14 +306,14 @@ public class EventDetailActivity extends BaseActivity {
     }
 
     private void quitEvent() {
-        showLoading();
+        // showLoading();
         eventManager.quitEvent(event, new processEventCallback() {
 
             @Override
             public void onFinish(final boolean isOk) {
                 runOnUiThread(new Runnable() {
                     public void run() {
-                        dismissLoading();
+                        // dismissLoading();
                         if (isOk) {
                             if (event.attendedUserIds.contains(","
                                     + UserManager.getInstance(EventDetailActivity.this).getCurrentUser().userId)) {

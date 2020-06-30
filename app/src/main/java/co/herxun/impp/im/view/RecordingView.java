@@ -1,20 +1,43 @@
 package co.herxun.impp.im.view;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import co.herxun.impp.R;
+import co.herxun.impp.utils.DBug;
 import co.herxun.impp.utils.Utils;
 
+import android.animation.Animator;
+import android.animation.Animator.AnimatorListener;
 import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
+import android.app.Dialog;
 import android.content.Context;
-
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnShowListener;
+import android.graphics.Color;
+import android.graphics.PixelFormat;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.GradientDrawable;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.RelativeLayout.LayoutParams;
 
 public class RecordingView extends RelativeLayout {
 	private ImageView imgRecordBack,imgRecording;

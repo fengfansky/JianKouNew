@@ -1,6 +1,12 @@
 package co.herxun.impp.activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONObject;
+
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -27,16 +33,6 @@ import android.widget.ImageView.ScaleType;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AlertDialog;
-
-import com.arrownock.social.IAnSocialCallback;
-
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import co.herxun.impp.R;
 import co.herxun.impp.controller.SocialManager;
 import co.herxun.impp.controller.UserManager;
@@ -46,7 +42,9 @@ import co.herxun.impp.utils.ImageUtility;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 
-public class CreatePostActivity extends BaseActivity {
+import com.arrownock.social.IAnSocialCallback;
+
+public class CreatePostActivity extends Activity {
     private AppBar appbar;
     private EditText etContent;
     private GridView gdPhotos;
@@ -86,7 +84,7 @@ public class CreatePostActivity extends BaseActivity {
         appbar.getMenuItemView().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                showLoading();
+                // showLoading();
                 createPost();
             }
         });
@@ -157,7 +155,7 @@ public class CreatePostActivity extends BaseActivity {
         }
 
         if (data.size() == 0 && etContent.getText().toString().length() == 0) {
-            dismissLoading();
+            // dismissLoading();
             Toast.makeText(this, getString(R.string.wall_create_post_error), Toast.LENGTH_LONG).show();
             return;
         }
@@ -170,13 +168,13 @@ public class CreatePostActivity extends BaseActivity {
                     public void onFailure(JSONObject arg0) {
                         DBug.e("createPost.onFailure", arg0.toString());
                         appbar.getMenuItemView().setEnabled(true);
-                        dismissLoading();
+                        // dismissLoading();
                     }
 
                     @Override
                     public void onSuccess(JSONObject arg0) {
                         DBug.e("createPost.onSuccess", arg0.toString());
-                        dismissLoading();
+                        // dismissLoading();
                         setResult(Activity.RESULT_OK);
                         onBackPressed();
                     }

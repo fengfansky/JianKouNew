@@ -161,18 +161,18 @@ public class FriendRequestListAdapter extends BaseAdapter {
                     @Override
                     public void onClick(View v) {
                         final FriendRequestActivity activity = (FriendRequestActivity) ct;
-                        activity.showLoading();
+//                        activity.showLoading();
                         UserManager.getInstance(ct).approveFriendRequest(request, new IAnSocialCallback() {
                             @Override
                             public void onFailure(JSONObject arg0) {
                                 DBug.e("approveFriendRequest.onFailure", arg0.toString());
-                                activity.dismissLoading();
+//                                activity. dismissLoading();
                             }
 
                             @Override
                             public void onSuccess(JSONObject arg0) {
                                 fetchRemoteData(false);
-                                activity.dismissLoading();
+//                                activity.dismissLoading();
                             }
                         });
                     }
@@ -181,18 +181,18 @@ public class FriendRequestListAdapter extends BaseAdapter {
                     @Override
                     public void onClick(View v) {
                         final FriendRequestActivity activity = (FriendRequestActivity) ct;
-                        activity.showLoading();
+//                        activity.showLoading();
                         UserManager.getInstance(ct).rejectFriendRequest(request, new IAnSocialCallback() {
                             @Override
                             public void onFailure(JSONObject arg0) {
                                 DBug.e("approveFriendRequest.onFailure", arg0.toString());
-                                activity.dismissLoading();
+//                                activity.dismissLoading();
                             }
 
                             @Override
                             public void onSuccess(JSONObject arg0) {
                                 fetchRemoteData(false);
-                                activity.dismissLoading();
+//                                activity.dismissLoading();
                             }
                         });
                     }

@@ -21,13 +21,12 @@ import android.util.AttributeSet;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.Button;
-
-import androidx.appcompat.widget.AppCompatTextView;
+import android.widget.TextView;
 
 /**
  * Fake Button class, used so TextViews can announce themselves as Buttons, for accessibility.
  */
-public class AccessibleTextView extends AppCompatTextView {
+public class AccessibleTextView extends TextView {
 
     public AccessibleTextView(Context context, AttributeSet attrs) {
         super(context, attrs);

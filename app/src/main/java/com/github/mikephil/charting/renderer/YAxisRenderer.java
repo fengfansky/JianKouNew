@@ -329,23 +329,23 @@ public class YAxisRenderer extends AxisRenderer {
 				float xOffset = Utils.convertDpToPixel(4f);
 				float yOffset = l.getLineWidth() + labelLineHeight;
 
-				final LimitLine.LimitLabelPosition position = l.getLabelPosition();
+				final LimitLabelPosition position = l.getLabelPosition();
 
-				if (position == LimitLine.LimitLabelPosition.RIGHT_TOP) {
+				if (position == LimitLabelPosition.RIGHT_TOP) {
 
 					mLimitLinePaint.setTextAlign(Align.RIGHT);
 					c.drawText(label,
 							mViewPortHandler.contentRight() - xOffset,
 							pts[1] - yOffset + labelLineHeight, mLimitLinePaint);
 
-				} else if (position == LimitLine.LimitLabelPosition.RIGHT_BOTTOM) {
+				} else if (position == LimitLabelPosition.RIGHT_BOTTOM) {
 
 					mLimitLinePaint.setTextAlign(Align.RIGHT);
 					c.drawText(label,
 							mViewPortHandler.contentRight() - xOffset,
 							pts[1] + yOffset, mLimitLinePaint);
 
-				} else if (position == LimitLine.LimitLabelPosition.LEFT_TOP) {
+				} else if (position == LimitLabelPosition.LEFT_TOP) {
 
 					mLimitLinePaint.setTextAlign(Align.LEFT);
 					c.drawText(label,

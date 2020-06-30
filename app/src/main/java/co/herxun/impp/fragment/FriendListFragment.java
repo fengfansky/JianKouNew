@@ -1,6 +1,12 @@
 package co.herxun.impp.fragment;
 
+import java.util.Observable;
+import java.util.Observer;
+
+import org.json.JSONObject;
+
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,16 +20,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AlertDialog;
-
-import com.arrownock.social.IAnSocialCallback;
-
-import org.json.JSONObject;
-
-import java.util.Observable;
-import java.util.Observer;
-
 import co.herxun.impp.R;
 import co.herxun.impp.activity.ChatActivity;
 import co.herxun.impp.activity.CreateTopicActivity;
@@ -39,6 +35,8 @@ import co.herxun.impp.model.User;
 import co.herxun.impp.utils.Constant;
 import co.herxun.impp.view.AppBar;
 import co.herxun.impp.view.BadgeView;
+
+import com.arrownock.social.IAnSocialCallback;
 
 public class FriendListFragment extends BaseFragment implements Observer{
 	private ListView mListView;

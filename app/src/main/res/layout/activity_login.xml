@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/no1"
-    android:orientation="vertical"
-    tools:context="${relativePackage}.${activityClass}" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,11 +25,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
-            <FrameLayout
+            <android.support.v7.widget.ContentFrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.23" >
-            </FrameLayout>
+            </android.support.v7.widget.ContentFrameLayout>
 
             <ImageView
                 android:id="@+id/imageView1"
@@ -40,11 +39,11 @@
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/login_logo" />
 
-            <FrameLayout
+            <android.support.v7.widget.ContentFrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.23" >
-            </FrameLayout>
+            </android.support.v7.widget.ContentFrameLayout>
         </LinearLayout>
 
         <co.herxun.impp.view.MaterialEditText

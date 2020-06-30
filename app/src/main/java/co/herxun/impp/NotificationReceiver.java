@@ -12,15 +12,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
-
-import androidx.annotation.RequiresApi;
-
 import co.herxun.impp.activity.SplashActivity;
 
 import com.arrownock.push.PushBroadcastReceiver;
 
 public class NotificationReceiver extends PushBroadcastReceiver {
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void showNotification(Context context, JSONObject payload, int notificationId) {
         if (payload == null) {
@@ -125,7 +121,7 @@ public class NotificationReceiver extends PushBroadcastReceiver {
                 n.number = badge;
             if (vibrate)
                 n.vibrate = vibrateTag;
-//            n.setLatestEventInfo(context, title, alert, pi);
+//         TODO   n.setLatestEventInfo(context, title, alert, pi);
         } else {
             // Use Notification.builder to create a Notification instance
             Notification.Builder builder = new Notification.Builder(context);

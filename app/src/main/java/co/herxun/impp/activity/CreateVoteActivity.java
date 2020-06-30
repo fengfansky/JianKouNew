@@ -1,6 +1,10 @@
 package co.herxun.impp.activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -29,12 +33,6 @@ import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AlertDialog;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import co.herxun.impp.R;
 import co.herxun.impp.controller.UserManager;
 import co.herxun.impp.controller.VoteManager;
@@ -46,7 +44,7 @@ import co.herxun.impp.utils.ImageUtility;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 
-public class CreateVoteActivity extends BaseActivity {
+public class CreateVoteActivity extends Activity {
     private AppBar appbar;
     private EditText etTitle, etDescription;
     private List<EditText> etChoiceList = new ArrayList<EditText>();
@@ -94,7 +92,7 @@ public class CreateVoteActivity extends BaseActivity {
         appbar.getMenuItemView().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                showLoading();
+                // // showLoading();
                 createVote();
             }
         });
@@ -210,7 +208,7 @@ public class CreateVoteActivity extends BaseActivity {
         }
         if (etTitle.getText().toString().length() == 0 || etDescription.getText().toString().length() == 0
                 || choices.length() == 0) {
-            dismissLoading();
+            // dismissLoading();
             Toast.makeText(this, getString(R.string.annou_vote_create_error), Toast.LENGTH_LONG).show();
             return;
         }
@@ -225,7 +223,7 @@ public class CreateVoteActivity extends BaseActivity {
                     @Override
                     public void onSuccess(Vote vote) {
                         DBug.e("createVote.onSuccess", vote.voteId);
-                        dismissLoading();
+                        // dismissLoading();
                         setResult(Activity.RESULT_OK);
                         onBackPressed();
                     }
@@ -236,7 +234,7 @@ public class CreateVoteActivity extends BaseActivity {
                         appbar.getMenuItemView().setEnabled(true);
                         runOnUiThread(new Runnable() {
                             public void run() {
-                                dismissLoading();
+                                // dismissLoading();
                                 Toast.makeText(getBaseContext(), exception, Toast.LENGTH_LONG).show();
                             }
                         });

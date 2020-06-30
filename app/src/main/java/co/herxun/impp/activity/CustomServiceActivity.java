@@ -3,6 +3,7 @@ package co.herxun.impp.activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -27,7 +28,7 @@ import co.herxun.impp.view.AppBar;
 import com.arrownock.appo.desk.IAnDeskGetGroupsCallback;
 import com.arrownock.exception.ArrownockException;
 
-public class CustomServiceActivity extends BaseActivity {
+public class CustomServiceActivity extends Activity {
     private ListView listView;
     private MemberListAdapter adapter;
     private Handler handler;
@@ -39,7 +40,7 @@ public class CustomServiceActivity extends BaseActivity {
         setContentView(R.layout.activity_custom_service);
 
         initView();
-        showLoading();
+        // showLoading();
         initData();
     }
 
@@ -103,7 +104,7 @@ public class CustomServiceActivity extends BaseActivity {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        dismissLoading();
+                        // dismissLoading();
                         adapter.applyData(data);
                         if (adapter.getCount() > 0) {
                             noCSLabel.setVisibility(View.GONE);
@@ -120,7 +121,7 @@ public class CustomServiceActivity extends BaseActivity {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        dismissLoading();
+                        // dismissLoading();
                         noCSLabel.setVisibility(View.VISIBLE);
                     }
                 });

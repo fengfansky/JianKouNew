@@ -8,19 +8,20 @@ import java.util.Observer;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.Toast;
-
-import androidx.viewpager.widget.ViewPager;
-
 import co.herxun.impp.R;
 import co.herxun.impp.adapter.FragmentPagerAdapter;
 import co.herxun.impp.controller.UserManager;
@@ -57,7 +58,7 @@ public class MainActivity extends BaseActivity implements Observer {
 
     private boolean doubleBackToExistPressedOnce = false;
 
-    private ViewPager.OnPageChangeListener mOnPageChangeListener = new ViewPager.OnPageChangeListener() {
+    private OnPageChangeListener mOnPageChangeListener = new OnPageChangeListener() {
         public void onPageScrollStateChanged(int arg0) {
         }
 

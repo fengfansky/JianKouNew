@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,7 +35,7 @@ import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 import co.herxun.impp.view.ListViewForScrollView;
 
-public class VoteDetailActivity extends BaseActivity {
+public class VoteDetailActivity extends Activity {
     private AppBar appbar;
     private Vote vote;
     private ImageView ivVotePhoto, iv_user_photo;
@@ -195,7 +196,7 @@ public class VoteDetailActivity extends BaseActivity {
 
                 @Override
                 public void onClick(View v) {
-                    showLoading();
+                    // showLoading();
                     String choice = "";
                     if (vote.voteType.equals(Constant.VOTE_TYPE_SINGLE)) {
                         for (CheckBox cb : adapter.getCheckBoxList()) {
@@ -219,7 +220,7 @@ public class VoteDetailActivity extends BaseActivity {
                     if (choice.length() == 0) {
                         Toast.makeText(VoteDetailActivity.this,
                                 getResources().getString(R.string.annou_vote_no_choice), Toast.LENGTH_LONG).show();
-                        dismissLoading();
+                        // dismissLoading();
                         return;
                     }
 
@@ -239,7 +240,7 @@ public class VoteDetailActivity extends BaseActivity {
                             });
                             runOnUiThread(new Runnable() {
                                 public void run() {
-                                    dismissLoading();
+                                    // dismissLoading();
                                     Toast.makeText(VoteDetailActivity.this,
                                             getResources().getString(R.string.annou_vote_vote_error),
                                             Toast.LENGTH_SHORT).show();
@@ -249,7 +250,7 @@ public class VoteDetailActivity extends BaseActivity {
 
                         @Override
                         public void onFinish(Vote vote) {
-                            dismissLoading();
+                            // dismissLoading();
                             Intent intent = new Intent(VoteDetailActivity.this, VoteResultsActivity.class);
                             intent.putExtra("vote_id", vote.voteId);
                             startActivityForResult(intent, 0);

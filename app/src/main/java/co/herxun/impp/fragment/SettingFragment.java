@@ -1,5 +1,15 @@
 package co.herxun.impp.fragment;
 
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -19,20 +29,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AlertDialog;
-
-import com.arrownock.social.IAnSocialCallback;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
 import co.herxun.impp.R;
 import co.herxun.impp.activity.LoginActivity;
 import co.herxun.impp.controller.UserManager;
@@ -40,6 +36,8 @@ import co.herxun.impp.model.User;
 import co.herxun.impp.utils.Constant;
 import co.herxun.impp.utils.ImageUtility;
 import co.herxun.impp.view.SettingView;
+
+import com.arrownock.social.IAnSocialCallback;
 
 public class SettingFragment extends BaseFragment {
     private SettingView mUserDetailView;

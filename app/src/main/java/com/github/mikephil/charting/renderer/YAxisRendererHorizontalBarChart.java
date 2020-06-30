@@ -232,18 +232,18 @@ public class YAxisRendererHorizontalBarChart extends YAxisRenderer {
                 float add = Utils.convertDpToPixel(4f);
                 float yOffset = add / 2f;
 
-                final LimitLine.LimitLabelPosition position = l.getLabelPosition();
+                final LimitLabelPosition position = l.getLabelPosition();
 
-                if (position == LimitLine.LimitLabelPosition.RIGHT_TOP) {
+                if (position == LimitLabelPosition.RIGHT_TOP) {
 
                     final float labelLineHeight = Utils.calcTextHeight(mLimitLinePaint, label);
                     mLimitLinePaint.setTextAlign(Align.LEFT);
                     c.drawText(label, pts[0] + xOffset, mViewPortHandler.contentTop() + yOffset + labelLineHeight, mLimitLinePaint);
-                } else if (position == LimitLine.LimitLabelPosition.RIGHT_BOTTOM) {
+                } else if (position == LimitLabelPosition.RIGHT_BOTTOM) {
 
                     mLimitLinePaint.setTextAlign(Align.LEFT);
                     c.drawText(label, pts[0] + xOffset, mViewPortHandler.contentBottom() - add, mLimitLinePaint);
-                } else if (position == LimitLine.LimitLabelPosition.LEFT_TOP) {
+                } else if (position == LimitLabelPosition.LEFT_TOP) {
 
                     mLimitLinePaint.setTextAlign(Align.RIGHT);
                     final float labelLineHeight = Utils.calcTextHeight(mLimitLinePaint, label);

@@ -1,34 +1,5 @@
 package co.herxun.impp.activity;
 
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.Bundle;
-import android.provider.MediaStore;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.WindowManager;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AlertDialog;
-
-import com.arrownock.appo.desk.IAnDeskCreateSessionCallback;
-import com.arrownock.exception.ArrownockException;
-import com.arrownock.im.callback.AnIMAddClientsEventData;
-import com.arrownock.im.callback.AnIMRemoveClientsEventData;
-import com.arrownock.im.callback.AnIMUpdateTopicEventData;
-import com.arrownock.live.IStartCallCallback;
-import com.arrownock.social.IAnSocialCallback;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -41,6 +12,26 @@ import java.util.Map;
 import java.util.Observable;
 import java.util.Observer;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.WindowManager;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 import co.herxun.impp.IMppApp;
 import co.herxun.impp.R;
 import co.herxun.impp.controller.RoomManager;
@@ -62,6 +53,14 @@ import co.herxun.impp.utils.DBug;
 import co.herxun.impp.utils.ImageUtility;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
+
+import com.arrownock.appo.desk.IAnDeskCreateSessionCallback;
+import com.arrownock.exception.ArrownockException;
+import com.arrownock.im.callback.AnIMAddClientsEventData;
+import com.arrownock.im.callback.AnIMRemoveClientsEventData;
+import com.arrownock.im.callback.AnIMUpdateTopicEventData;
+import com.arrownock.live.IStartCallCallback;
+import com.arrownock.social.IAnSocialCallback;
 
 public class ChatActivity extends BaseActivity implements Observer {
     private ChatView mChatView;
@@ -317,7 +316,7 @@ public class ChatActivity extends BaseActivity implements Observer {
         msg.readACK = true;
         msg.update();
         mChatView.appendMessage(msg);
-        showLoading();
+        // showLoading();
         IMManager.getInstance(this).getAnDesk()
                 .createSession(mChat.group.groupId, currentUser.clientId, new IAnDeskCreateSessionCallback() {
 
@@ -325,7 +324,7 @@ public class ChatActivity extends BaseActivity implements Observer {
                     public void onSuccess(final String sessionId, final String accountId, final String accountName) {
                         runOnUiThread(new Runnable() {
                             public void run() {
-                                dismissLoading();
+                                // dismissLoading();
                                 // 保存聊天group
                                 DeskGroup g = mChat.group;
                                 g.currentClientId = UserManager.getInstance(ChatActivity.this).getCurrentUser().clientId;

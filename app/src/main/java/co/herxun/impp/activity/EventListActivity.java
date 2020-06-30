@@ -3,16 +3,16 @@ package co.herxun.impp.activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-
-import androidx.viewpager.widget.ViewPager;
-
 import co.herxun.impp.R;
 import co.herxun.impp.adapter.FragmentPagerAdapter;
 import co.herxun.impp.fragment.BaseFragment;
@@ -93,7 +93,7 @@ public class EventListActivity extends BaseActivity {
         });
     }
 
-    private ViewPager.OnPageChangeListener mOnPageChangeListener = new ViewPager.OnPageChangeListener() {
+    private OnPageChangeListener mOnPageChangeListener = new OnPageChangeListener() {
         public void onPageScrollStateChanged(int arg0) {
         }
 

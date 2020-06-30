@@ -1,6 +1,22 @@
 package co.herxun.impp.im.controller;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Observable;
+import java.util.Set;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
@@ -9,8 +25,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AlertDialog;
+import co.herxun.impp.IMppApp;
+import co.herxun.impp.R;
+import co.herxun.impp.activity.BaseActivity;
+import co.herxun.impp.activity.LoginActivity;
+import co.herxun.impp.controller.MyIAnLiveEventListener;
+import co.herxun.impp.controller.UserManager;
+import co.herxun.impp.controller.UserManager.FetchSingleUserCallback;
+import co.herxun.impp.controller.UserManager.FetchUserlistCallBack;
+import co.herxun.impp.im.model.Chat;
+import co.herxun.impp.im.model.ChatUser;
+import co.herxun.impp.im.model.DeskGroup;
+import co.herxun.impp.im.model.Message;
+import co.herxun.impp.im.model.Topic;
+import co.herxun.impp.im.model.TopicMember;
+import co.herxun.impp.model.FriendRequest;
+import co.herxun.impp.model.SessionData;
+import co.herxun.impp.model.SessionUserData;
+import co.herxun.impp.model.User;
+import co.herxun.impp.utils.Constant;
+import co.herxun.impp.utils.DBug;
+import co.herxun.impp.utils.SpfHelper;
 
 import com.activeandroid.ActiveAndroid;
 import com.activeandroid.query.Delete;
@@ -48,43 +83,6 @@ import com.arrownock.im.callback.IAnIMHistoryCallback;
 import com.arrownock.im.callback.IAnIMPushBindingCallback;
 import com.arrownock.im.callback.IAnIMTopicCallback;
 import com.arrownock.live.AnLive;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Observable;
-import java.util.Set;
-
-import co.herxun.impp.IMppApp;
-import co.herxun.impp.R;
-import co.herxun.impp.activity.BaseActivity;
-import co.herxun.impp.activity.LoginActivity;
-import co.herxun.impp.controller.MyIAnLiveEventListener;
-import co.herxun.impp.controller.UserManager;
-import co.herxun.impp.controller.UserManager.FetchSingleUserCallback;
-import co.herxun.impp.controller.UserManager.FetchUserlistCallBack;
-import co.herxun.impp.im.model.Chat;
-import co.herxun.impp.im.model.ChatUser;
-import co.herxun.impp.im.model.DeskGroup;
-import co.herxun.impp.im.model.Message;
-import co.herxun.impp.im.model.Topic;
-import co.herxun.impp.im.model.TopicMember;
-import co.herxun.impp.model.FriendRequest;
-import co.herxun.impp.model.SessionData;
-import co.herxun.impp.model.SessionUserData;
-import co.herxun.impp.model.User;
-import co.herxun.impp.utils.Constant;
-import co.herxun.impp.utils.DBug;
-import co.herxun.impp.utils.SpfHelper;
 
 public class IMManager extends Observable {
     private static IMManager sIMManager;
@@ -1086,7 +1084,7 @@ public class IMManager extends Observable {
         }
     }
 
-    private void getUsers(AnIMAddClientsEventData data, final UserManager.FetchUserlistCallBack callback) {
+    private void getUsers(AnIMAddClientsEventData data, final FetchUserlistCallBack callback) {
         /*
          * 1.��������ݿ� ��ȡusers 2.��server��ȡusers 3.���������ȡ��users
          */
@@ -1127,7 +1125,7 @@ public class IMManager extends Observable {
         }
     }
 
-    private void getRemovedUsers(AnIMRemoveClientsEventData data, final UserManager.FetchUserlistCallBack callback) {
+    private void getRemovedUsers(AnIMRemoveClientsEventData data, final FetchUserlistCallBack callback) {
 
         final List<User> userList = new ArrayList<User>();
         String clientIds = "";
@@ -1236,7 +1234,7 @@ public class IMManager extends Observable {
             notifyObservers(data);
         }
 
-        public void receivedRemoveClientsFromTopicEvent(final com.arrownock.im.callback.AnIMRemoveClientsEventData data) {
+        public void receivedRemoveClientsFromTopicEvent(final AnIMRemoveClientsEventData data) {
             super.receivedRemoveClientsFromTopicEvent(data);
 
             final Message msg = new Message();
@@ -1256,7 +1254,7 @@ public class IMManager extends Observable {
 
             msg.timestamp = data.getTimestamp();
 
-            getRemovedUsers(data, new UserManager.FetchUserlistCallBack() {
+            getRemovedUsers(data, new FetchUserlistCallBack() {
                 @Override
                 public void onFinish(List<User> userList) {
                     Topic topic = new Topic();
@@ -1385,7 +1383,7 @@ public class IMManager extends Observable {
 
             msg.timestamp = data.getTimestamp();
 
-            getUsers(data, new UserManager.FetchUserlistCallBack() {
+            getUsers(data, new FetchUserlistCallBack() {
                 @Override
                 public void onFinish(List<User> userList) {
                     Topic topic = new Topic();

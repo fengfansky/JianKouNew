@@ -1,5 +1,9 @@
 package co.herxun.impp.activity;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,14 +11,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.arrownock.social.IAnSocialCallback;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import co.herxun.impp.R;
 import co.herxun.impp.controller.UserManager;
 import co.herxun.impp.im.controller.IMManager;
@@ -22,7 +18,9 @@ import co.herxun.impp.model.User;
 import co.herxun.impp.utils.Constant;
 import co.herxun.impp.utils.SpfHelper;
 
-public class SplashActivity extends AppCompatActivity {
+import com.arrownock.social.IAnSocialCallback;
+
+public class SplashActivity extends Activity {
     private ProgressBar progress = null;
     private final int SPLASH_DISPLAY_LENGHT = 3000;
     private String payload;
@@ -51,19 +49,19 @@ public class SplashActivity extends AppCompatActivity {
 
     private void autoSignIn() {
         if (SpfHelper.getInstance(this).hasSignIn()) {
-            // showLoading();
+            // // showLoading();
             UserManager.getInstance(this).login(SpfHelper.getInstance(this).getMyUsername(),
                     SpfHelper.getInstance(this).getMyPwd(), new IAnSocialCallback() {
                         @Override
                         public void onFailure(JSONObject arg0) {
                             try {
-                                // dismissLoading();
+                                // // dismissLoading();
                                 String errorMsg = arg0.getJSONObject("meta").getString("message");
                                 Toast.makeText(getBaseContext(), errorMsg, Toast.LENGTH_LONG).show();
                                 goToLoginActivity();
                             } catch (JSONException e) {
                                 e.printStackTrace();
-                                // dismissLoading();
+                                // // dismissLoading();
                                 goToLoginActivity();
                             }
                         }
@@ -122,7 +120,7 @@ public class SplashActivity extends AppCompatActivity {
         if (payload != null) {
             i.putExtra(Constant.INTENT_EXTRA_KEY_PAYLOAD, payload);
         }
-        // dismissLoading();
+        // // dismissLoading();
         startActivity(i);
         finish();
     }

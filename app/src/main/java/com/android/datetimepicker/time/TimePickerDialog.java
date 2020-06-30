@@ -16,7 +16,12 @@
 
 package com.android.datetimepicker.time;
 
+import java.text.DateFormatSymbols;
+import java.util.ArrayList;
+import java.util.Locale;
+
 import android.animation.ObjectAnimator;
+import android.app.ActionBar.LayoutParams;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -33,18 +38,11 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import androidx.appcompat.app.ActionBar.LayoutParams;
+import co.herxun.impp.R;
 
 import com.android.datetimepicker.HapticFeedbackController;
 import com.android.datetimepicker.Utils;
 import com.android.datetimepicker.time.RadialPickerLayout.OnValueSelectedListener;
-
-import java.text.DateFormatSymbols;
-import java.util.ArrayList;
-import java.util.Locale;
-
-import co.herxun.impp.R;
 
 /**
  * Dialog to set a time.

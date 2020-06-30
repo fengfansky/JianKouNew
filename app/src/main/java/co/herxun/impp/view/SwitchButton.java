@@ -9,7 +9,6 @@ import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -74,7 +73,7 @@ public class SwitchButton extends View implements View.OnClickListener {
     }
 
     @Override  
-    protected void onDraw(Canvas canvas) {
+    protected void onDraw(Canvas canvas) {  
         super.onDraw(canvas);  
         if (mDeltX > 0 || mDeltX == 0 && mSwitchOn) {  
             if(mSrc != null) {  
@@ -88,22 +87,17 @@ public class SwitchButton extends View implements View.OnClickListener {
             }  
         }   
         
-//        <span style="white-space:pre">        </span>//这儿是离屏缓冲，自己感觉类似双缓冲机制吧
-        //TODO canvas.saveLayer 方法更新
-/*
-        int count = canvas.saveLayer(new RectF(mDest), null, Canvas.MATRIX_SAVE_FLAG
-                | Canvas.CLIP_SAVE_FLAG | Canvas.HAS_ALPHA_LAYER_SAVE_FLAG
-                | Canvas.FULL_COLOR_LAYER_SAVE_FLAG
-                | Canvas.CLIP_TO_LAYER_SAVE_FLAG);
-*/
-
-
-        canvas.drawBitmap(mSwitchBottom, mSrc, mDest, null);
+//        <span style="white-space:pre">        </span>//这儿是离屏缓冲，自己感觉类似双缓冲机制吧  
+//        TODO int count = canvas.saveLayer(new RectF(mDest), null, Canvas.MATRIX_SAVE_FLAG
+//                | Canvas.CLIP_SAVE_FLAG | Canvas.HAS_ALPHA_LAYER_SAVE_FLAG
+//                | Canvas.FULL_COLOR_LAYER_SAVE_FLAG
+//                | Canvas.CLIP_TO_LAYER_SAVE_FLAG);
+  
+        canvas.drawBitmap(mSwitchBottom, mSrc, mDest, null);  
         canvas.drawBitmap(mSwitchThumb, mSrc, mDest, null);  
         canvas.drawBitmap(mSwitchFrame, 0, 0, null);  
-        canvas.drawBitmap(mSwitchMask, 0, 0, mPaint);
-        //TODO canvas.restoreToCount
-//        canvas.restoreToCount(count);
+        canvas.drawBitmap(mSwitchMask, 0, 0, mPaint);  
+        //TODO canvas.restoreToCount(count);
     }    @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {

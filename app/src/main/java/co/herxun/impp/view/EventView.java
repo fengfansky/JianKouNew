@@ -8,8 +8,7 @@ import java.util.Map;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -301,7 +300,7 @@ public class EventView extends SwipeRefreshLayout {
         });
     }
 
-    private SwipeRefreshLayout.OnRefreshListener mOnRefreshListener = new OnRefreshListener() {
+    private OnRefreshListener mOnRefreshListener = new OnRefreshListener() {
         @Override
         public void onRefresh() {
             initEventData();

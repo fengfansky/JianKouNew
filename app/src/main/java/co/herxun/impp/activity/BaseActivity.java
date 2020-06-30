@@ -1,18 +1,26 @@
 package co.herxun.impp.activity;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
-
 import co.herxun.impp.IMppApp;
+import co.herxun.impp.utils.SkinUtils;
 import co.herxun.impp.view.LoadingDialog;
 
-import androidx.fragment.app.FragmentActivity;
-
+import com.gyf.immersionbar.ImmersionBar;
 import com.umeng.analytics.MobclickAgent;
 
-public class BaseActivity extends FragmentActivity {
+public class BaseActivity extends AppCompatActivity {
     private LoadingDialog loadingDialog;
     protected boolean isActive = false;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ImmersionBar.with(this).statusBarDarkFont(!SkinUtils.getDarkModeStatus(this)).init();
+    }
 
     @Override
     protected void onResume() {

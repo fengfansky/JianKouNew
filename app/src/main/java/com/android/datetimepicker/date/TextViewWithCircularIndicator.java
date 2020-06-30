@@ -23,15 +23,13 @@ import android.graphics.Paint;
 import android.graphics.Paint.Align;
 import android.graphics.Paint.Style;
 import android.util.AttributeSet;
-
-import androidx.appcompat.widget.AppCompatTextView;
-
+import android.widget.TextView;
 import co.herxun.impp.R;
 
 /**
  * A text view which, when pressed or activated, displays a blue circle around the text.
  */
-public class TextViewWithCircularIndicator extends AppCompatTextView {
+public class TextViewWithCircularIndicator extends TextView {
 
     private static final int SELECTED_CIRCLE_ALPHA = 60;
 

@@ -1,5 +1,12 @@
 package co.herxun.impp.activity;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,17 +17,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.arrownock.exception.ArrownockException;
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import co.herxun.impp.R;
 import co.herxun.impp.controller.UserManager;
 import co.herxun.impp.controller.UserManager.FetchUserCallback;
@@ -36,7 +32,9 @@ import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 import co.herxun.impp.view.WallView;
 
-public class WallActivity extends BaseActivity {
+import com.arrownock.exception.ArrownockException;
+
+public class WallActivity extends Activity {
 	private AppBar appbar;
 	private WallView mWallView;
 	private FrameLayout header;
@@ -120,7 +118,7 @@ public class WallActivity extends BaseActivity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 	    super.onActivityResult(requestCode, resultCode, data);
-	  	if(resultCode == AppCompatActivity.RESULT_OK){
+	  	if(resultCode == Activity.RESULT_OK){
 	  		initData();
 	  	}
 	}

@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import com.arrownock.social.IAnSocialCallback;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -27,7 +28,7 @@ import co.herxun.impp.utils.Constant;
 import co.herxun.impp.utils.ImageUtility;
 import co.herxun.impp.view.SettingView;
 
-public class UserInfoSetting extends BaseActivity {
+public class UserInfoSetting extends Activity {
 
     private TextView takePhoto, choosePhoto;
     private SettingView settingView;

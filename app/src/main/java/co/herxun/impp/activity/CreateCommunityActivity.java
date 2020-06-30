@@ -1,6 +1,10 @@
 package co.herxun.impp.activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -24,12 +28,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AlertDialog;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import co.herxun.impp.R;
 import co.herxun.impp.controller.CommunityManager;
 import co.herxun.impp.controller.CommunityManager.CreateCommunityCallback;
@@ -41,7 +39,7 @@ import co.herxun.impp.utils.ImageUtility;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 
-public class CreateCommunityActivity extends BaseActivity {
+public class CreateCommunityActivity extends Activity {
     private AppBar appbar;
     private EditText etContent, etDescription, etUrl;
     private Dialog mActionDialog;
@@ -84,7 +82,7 @@ public class CreateCommunityActivity extends BaseActivity {
         appbar.getMenuItemView().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                showLoading();
+                // showLoading();
                 createCommunity();
             }
         });
@@ -180,19 +178,19 @@ public class CreateCommunityActivity extends BaseActivity {
         }
         if (dataList.isEmpty() || etContent.getText().toString().length() == 0
                 || etDescription.getText().toString().length() == 0 || etUrl.getText().toString().length() == 0) {
-            dismissLoading();
+            // dismissLoading();
             Toast.makeText(this, getString(R.string.annou_comunity_create_error), Toast.LENGTH_LONG).show();
             return;
         }
 
         if (!Utils.isTopURL(etUrl.getText().toString())) {
-            dismissLoading();
+            // dismissLoading();
             Toast.makeText(this, getString(R.string.annou_comunity_create_url_error), Toast.LENGTH_LONG).show();
             return;
         }
 
         if (!Utils.isConnect(etUrl.getText().toString())) {
-            dismissLoading();
+            // dismissLoading();
             Toast.makeText(this, getString(R.string.annou_comunity_create_url_error), Toast.LENGTH_LONG).show();
             return;
         }
@@ -207,7 +205,7 @@ public class CreateCommunityActivity extends BaseActivity {
                     @Override
                     public void onSuccess(Community community) {
                         DBug.e("createCommunity.onSuccess", community.communityId);
-                        dismissLoading();
+                        // dismissLoading();
                         setResult(Activity.RESULT_OK);
                         onBackPressed();
                     }
@@ -218,7 +216,7 @@ public class CreateCommunityActivity extends BaseActivity {
                         appbar.getMenuItemView().setEnabled(true);
                         runOnUiThread(new Runnable() {
                             public void run() {
-                                dismissLoading();
+                                // dismissLoading();
                                 Toast.makeText(getBaseContext(), exception, Toast.LENGTH_LONG).show();
                             }
                         });

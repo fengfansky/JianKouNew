@@ -1,6 +1,12 @@
 package co.herxun.impp.activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONObject;
+
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -26,16 +32,6 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AlertDialog;
-
-import com.arrownock.social.IAnSocialCallback;
-
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import co.herxun.impp.R;
 import co.herxun.impp.controller.RoomManager;
 import co.herxun.impp.controller.SocialManager;
@@ -47,7 +43,9 @@ import co.herxun.impp.utils.ImageUtility;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 
-public class CreateRoomPostActivity extends BaseActivity {
+import com.arrownock.social.IAnSocialCallback;
+
+public class CreateRoomPostActivity extends Activity {
     private AppBar appbar;
     private EditText etContent;
     private GridView gdPhotos;

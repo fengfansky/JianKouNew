@@ -2,6 +2,7 @@ package co.herxun.impp.activity;
 
 import java.util.List;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -19,7 +20,7 @@ import co.herxun.impp.model.User;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 
-public class SearchUserActivity extends BaseActivity {
+public class SearchUserActivity extends Activity {
 	private AppBar mAppbar;
 	private ListView mListView;
 	private UserListAdapter mUserListAdapter;
@@ -65,7 +66,7 @@ public class SearchUserActivity extends BaseActivity {
 	}
 	
 	public void fillRemoteData(String username){
-		showLoading();
+		// showLoading();
 		UserManager.getInstance(this).searchRemoteUser(username, new FetchUserCallback(){
 			@Override
 			public void onFinish(final List<User> users) {
@@ -75,7 +76,7 @@ public class SearchUserActivity extends BaseActivity {
 						mUserListAdapter.applyData(users);
 					}
 				});
-				dismissLoading();
+				// dismissLoading();
 			}
 		});
 	}

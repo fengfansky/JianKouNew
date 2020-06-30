@@ -6,6 +6,7 @@ import java.util.Observable;
 import java.util.Observer;
 import java.util.Set;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -26,7 +27,7 @@ import co.herxun.impp.utils.Constant;
 import co.herxun.impp.utils.Utils;
 import co.herxun.impp.view.AppBar;
 
-public class CreateTopicActivity extends BaseActivity  implements Observer{
+public class CreateTopicActivity extends Activity implements Observer{
 	private AppBar mAppbar;
 	private ListView mListView;
 	private UserChooseListAdapter mUserChooseListAdapter;
